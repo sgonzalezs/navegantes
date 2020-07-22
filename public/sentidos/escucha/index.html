@@ -37,26 +37,29 @@
         </div>
     </nav>
     <section class="container-fluid">
-        <section class="row contentEscucha">
+        <section class="row content">
             <div class="col-sm-8">
-                <video id="videoEscucha" autoplay controls>
+                <video class="videoLoad" autoplay controls>
                     <source src="../../media/sentidos/escucha/ejemplo1.mp4" type="video/mp4">
                     Este navegador no es compatible con la reproducción de vídeos.
                 </video>
             </div>  
             <div class="col-sm-4">
                 <form id="formEscucha">
-                    <h2 class="text-white titleEscucha">ESCUCHA</h2>
-                    <p class="subTitleEscucha">
+                    <h2 class="text-white title">ESCUCHA</h2>
+                    <p class="subTitle">
                         Mira el video, conoce más sobre el sentido de la escucha y responde:
                     </p>
                     <p id="questionEscucha">
                     </p>
-                    <textarea class="answerEscucha" id="txtAnswer" required></textarea>
-                    <button type="Submit" class="btnSendEscucha">RESPONDER</button>
+                    <textarea class="answer" id="txtAnswer" required></textarea>
+                    <button type="Submit" class="btnSend">RESPONDER</button>
                 </form>
-                <a href="">
-                    <button class="btnContinueEscucha" type="button" style="display: none;">Continuar</button>      
+                <div class="alert alert-primary mt-2" role="alert" style="display:none;">
+                    
+                </div>
+                <a href="/sentido">
+                    <button class="btnContinue" type="button" style="display: none;">Continuar</button>      
                 </a> 
             </div>
         </section>

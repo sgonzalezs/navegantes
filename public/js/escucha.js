@@ -1,7 +1,6 @@
 $(document).ready(function(){
     getAvatarUser();
     let identity=JSON.parse(localStorage.getItem('identity'));
-    // console.log(identity);
     let age=identity.age;
     
     $("#questionEscucha").text();
@@ -13,14 +12,13 @@ $(document).ready(function(){
 
     $("#formEscucha").on("submit", function(e){
         e.preventDefault();
-
         let data={
             id:identity._id,
             answer:$("#txtAnswer").val(),
             sense:'escucha'
         }
 
-        fetch('/escucha', {
+        fetch('/respuesta', {
             method: 'POST', 
             body: JSON.stringify(data),
             headers:{
@@ -34,16 +32,14 @@ $(document).ready(function(){
               if(!response.ok){
                   console.log(response.message);
               }else{
-                  console.log(response.message);
-                  $(".btnContinueEscucha").css("display", "block");
-                //   localStorage.setItem('userAvatar', image);
-                //   window.location="sentido";
+                  $(".alert").css("display", "block");
+                  $(".alert").text(response.message);
+                  $(".btnContinue").css("display", "block");
               }
           })
           .catch(function(err){
               console.log('Error:', err)
           });
-
     });
 });
 

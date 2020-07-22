@@ -14,8 +14,7 @@ let questionSchema=new Schema({
     },
     answer:{
         type:String,
-        required:[true, "Debes ingresar una respuesta"],
-        unique:true
+        required:[true, "Debes ingresar una respuesta"]
     }
 });
 

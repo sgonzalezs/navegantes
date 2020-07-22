@@ -25,7 +25,7 @@ app.get("/escucha", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/escucha"});
 });
 
-app.post("/escucha", (req,res)=>{
+app.post("/respuesta", (req,res)=>{
     let body=req.body;
     let question=new Question({
         user_id:body.id,
@@ -47,7 +47,12 @@ app.post("/escucha", (req,res)=>{
         });
     });
 });
-// 
+// --------------------------------------
+
+//Rutas Sentido Vista
+app.get("/vista", (req,res)=>{
+    res.sendFile("index.html", {root:"public/sentidos/vista"});
+});
 
 app.post("/registro", (req,res)=>{
     let body=req.body;

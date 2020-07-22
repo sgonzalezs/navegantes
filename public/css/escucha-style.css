@@ -5,31 +5,31 @@ body{
     background-size: 100% 110%;
 }
 
-#videoEscucha{
+.videoLoad{
     width: 100%;
     height: auto;
 }
 
-.contentEscucha{
+.content{
     margin:2%;
 }
 
-.titleEscucha{
+.title{
     font-family: 'Bungee', cursive;
 }
 
-.subTitleEscucha{
+.subTitle{
     font-family: 'Leckerli One', cursive;
     color:#ffff4d;
     font-size:20px;
 }
 
-#questionEscucha{
+#questionEscucha, #questionVista{
     font-style: italic;
-    font-size:20px;
+    font-size:17px;
 }
 
-.answerEscucha{
+.answer{
     border:3px solid #f3f3f3;
     border-radius: 5px;
     background-color: transparent;
@@ -39,12 +39,12 @@ body{
     font-style: italic;
 }
 
-.answerEscucha:focus{
+.answer:focus{
     outline:none !important;
     outline-width: 0 !important;
 }
 
-.btnSendEscucha, .btnContinueEscucha{
+.btnSend, .btnContinue{
     background-image: url('../images/avatar/Fondo.png');
     background-size: cover;
     padding:5px;
@@ -56,6 +56,7 @@ body{
     text-decoration: none;
     font-size: 20px;
     margin-left: 20%;
-    margin-top:20px;
+    margin-top:10px;
     box-shadow: 8px 9px 17px -4px rgba(0,0,0,0.75);
 }
+
