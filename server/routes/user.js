@@ -1,0 +1,87 @@
+const express=require('express');
+const User=require("../models/user.js");
+
+//token config
+const jwt=require("jsonwebtoken");
+const { verifyToken } = require('../middlewares/auth.js');
+
+const app=express();
+
+app.get("/", (req,res)=>{
+    res.sendFile('index.html', {root:'public/'});
+});
+
+app.get("/avatar", (req,res)=>{
+    res.sendFile("avatar.html", {root: 'public/'});
+});
+
+app.get("/sentidos", (req,res)=>{
+    res.sendFile("sentidos.html", {root: 'public/'});
+});
+
+app.post("/registro", (req,res)=>{
+    let body=req.body;
+
+    User.findOne({email:body.email}, (err, currentUser)=>{
+		if(err){
+			return res.status(400).json({
+				ok:false,
+				message:err
+			});
+		}
+
+		if(currentUser){
+            let token=jwt.sign({
+                user:currentUser
+            }, 'SECREET-SEED-999',{expiresIn:60*60*24*30});
+            return res.status(200).json({
+                ok:true,
+                user:currentUser,
+                token
+            });
+		}else{
+			let user=new User({
+				name:body.name,
+				email:body.email,
+				age:body.age
+			});
+			user.save((error, newUser)=>{
+				if(error){
+					return res.status(400).json({
+						ok:false,
+						message:error
+					});
+				}
+				let token=jwt.sign({
+					user:newUser
+				}, 'SECREET-SEED-999',{expiresIn:60*60*24*30});
+				return res.status(200).json({
+					ok:true,
+					user:newUser,
+					token
+				});
+			});
+		}
+	});
+});
+
+app.put("/avatar", (req,res)=>{
+    let body=req.body;
+    
+    User.findOneAndUpdate({email:body.email},{image:body.image}, (err, userUpdated)=>{
+        if(err){
+            return res.status(400).json({
+				ok:false,
+				message:err
+			});
+        }
+
+        return res.status(200).json({
+            ok:true,
+            user:userUpdated
+        });
+    });
+
+});
+
+module.exports=app;

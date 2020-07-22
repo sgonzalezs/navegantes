@@ -1,0 +1,113 @@
+/* Estilo body */
+body{
+    background-image: url('../images/avatar/fondo_2.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-size: 100% 100vh;
+}
+/*  */
+
+/*-------------- Estilo menu principal -------------------*/
+.navAvatar{
+    background-image: url('../images/avatar/navbar.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    opacity: 0.9;
+    font-family: 'Bungee', cursive;
+    font-size: 20px;
+    color: #ffffff;
+    position: relative;
+}
+
+#navbarNavAltMarkup{
+    margin-left:23%;
+}
+
+.navAvatar p{
+    margin-top: 25px;
+}
+
+.avatarSelected{
+    width: 90px;
+    height: 90px;
+    margin-right: 90px;
+    position: relative;
+    border-radius: 100px;
+    background: #ffffff;
+}
+
+.avatarSelected img{
+    margin-left: 10px;
+    height: auto;
+}
+
+.currentNav{
+    margin:0 60px 0 60px;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.currentNav p{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* ---------------------------------------------------------- */
+
+.avatarSelect{
+    background-image: url('../images/avatar/fondo_2.png');
+    background-repeat:no-repeat;
+    background-size: 100% 50vh;
+    margin-top: 5%;
+}
+
+.avatarSelect img{
+    width: 24%;
+    height: 50vh;
+    transition: transform 0.2s;
+}
+
+.avatarSelect img:hover{
+    transform: scale(1.03,1.03);
+}
+
+.avatarDesc{
+    margin-top: 5%;
+}
+
+.avatarDesc h2{
+    text-align: center;
+    font-family: 'Bungee', cursive;
+}
+
+.avatarDesc p{
+    color: #180199;
+    font-style: italic;
+    font-weight: bold;
+    text-align: justify;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.buttonGroup{
+    font-family: 'Bungee', cursive;
+    margin-left: 40%;
+    margin-top: 8%;
+}
+
+.buttonGroup button{
+    background-image: url('../images/avatar/Fondo.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    text-align: center;
+    text-decoration: none;
+    font-size: 23px;
+    box-shadow: 8px 9px 17px -4px rgba(0,0,0,0.75);
+    padding:5px 10px;
+    color:#ffffff;
+}
+
+.buttonGroup button:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+}

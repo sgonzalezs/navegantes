@@ -1,0 +1,59 @@
+body{
+    background-image: url('../images/fondo/background.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-size: 100% 100vh;
+}
+
+.formLogin{
+    margin-top: 30%;
+}
+
+.formTitle{
+    font-family: 'Bungee', cursive;
+    color:#ffffff;
+    border:1px solid #f3f3f3;
+    padding: 10px 10px 0px 10px;
+}
+
+.btnLogin{
+    width: 200px;
+    font-family: 'Bungee', cursive;
+    color:#ffffff;
+    background-image: url('../images/fondo/Fondo.png');
+    background-size: cover;
+    /* background:linear-gradient(180deg, #8226fa,  #1c4ad3 30%, #4d79ff ); */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 23px;
+    margin-left: 25%;
+    box-shadow: 8px 9px 17px -4px rgba(0,0,0,0.75);
+}
+
+input{
+    border:1px solid #f3f3f3;
+    background-color: transparent;
+    padding: 7px;
+    width:100%;
+    color: #ffffff;
+    font-style: italic;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+input::placeholder {
+    color: #f3f3f3;
+    font-style: italic;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+input:focus, .btnLogin:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+}
+
+/* Olas */
+div.olas img{
+    float: right;
+}

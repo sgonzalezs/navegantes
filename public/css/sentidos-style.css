@@ -1,0 +1,33 @@
+body{
+    background-image: url('../images/avatar/fondo_2.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-size: 100% 110%;
+}
+
+.contentSentidos{
+    background:#ffffff;
+    margin-top: 2%;
+}
+
+.contentSentidosDesc{
+    width: 90%;
+    margin-top: 5%;
+    float: left;
+}
+
+.contentSentidosDesc h1{
+    font-size: 20px;
+}
+
+.contentSentidosImg img{
+    width: 20%;
+    height: 500px;
+    padding:10px 0px;
+    float: left;
+    transition: transform 0.2s;
+}
+
+.contentSentidosImg img:hover{
+    transform:scale(1.02,1.02);
+}
