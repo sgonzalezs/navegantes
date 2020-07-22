@@ -24,6 +24,17 @@ app.get("/sentido", (req,res)=>{
 app.get("/escucha", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/escucha"});
 });
+// --------------------------------------
+
+//Rutas Sentido Vista
+app.get("/vista", (req,res)=>{
+    res.sendFile("index.html", {root:"public/sentidos/vista"});
+});
+
+// Rutas Sentido Tacto
+app.get("/tacto", (req,res)=>{
+    res.sendFile("index.html", {root:"public/sentidos/tacto"});
+});
 
 app.post("/respuesta", (req,res)=>{
     let body=req.body;
@@ -46,12 +57,6 @@ app.post("/respuesta", (req,res)=>{
             message:"Felicidades, has alcanzado un nuevo nivel de exploración."
         });
     });
-});
-// --------------------------------------
-
-//Rutas Sentido Vista
-app.get("/vista", (req,res)=>{
-    res.sendFile("index.html", {root:"public/sentidos/vista"});
 });
 
 app.post("/registro", (req,res)=>{
