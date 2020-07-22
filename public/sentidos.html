@@ -4,20 +4,20 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Elige tu sentido favorito</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script>
         if(!localStorage.getItem('token')){
             window.location="/";
         }
     </script>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" 
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-  
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/avatar-style.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/sentidos-style.css'>
+    <link rel='stylesheet' type='text/css' href='./css/style.css'>
+    <link rel='stylesheet' type='text/css' href='./css/avatar-style.css'>
+    <link rel='stylesheet' type='text/css' href='./css/sentidos-style.css'>
 </head>
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg navAvatar">
@@ -26,7 +26,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="#"><p>INICIO</p> </a>
+              <a class="nav-item nav-link active" href="/"><p>INICIO</p> </a>
               <a class="nav-item nav-link active currentNav" href="#"><p>RETA A UN AMIGO</p></a>
               <a class="nav-item nav-link active" href="#"><p>EVENTOS</p></a>
             </div>
@@ -40,7 +40,7 @@
             <div class="col-sm-12">
                 <div class="row contentSentidos">
                     <div class="col-sm-8 contentSentidosImg">
-                        <a href="">
+                        <a href="/escucha">
                             <img src="./images/sentidos/escucha.png">
                         </a>
                         <a href="">
@@ -58,10 +58,10 @@
                     </div>
                     <div class="col-sm-4 contentSentidosDesc">
                         <h1>Selecciona tu sentido favorito</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                            Expedita explicabo vel fugiat temporibus maxime reiciendis, 
-                            consequatur possimus odio aut blanditiis quidem ea pariatur 
-                            officia labore iste voluptas. Earum, illum provident.
+                        <p>
+                            A través de ellos nos comunicamos con el mundo exterior. 
+                            Antes de entender lo que nos rodea, vamos a explorar nuestros sentidos. 
+                            Elige uno y comienza este viaje.
                         </p>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 const express=require('express');
 const User=require("../models/user.js");
+const Question=require("../models/questions.js");
 
 //token config
 const jwt=require("jsonwebtoken");
@@ -15,9 +16,38 @@ app.get("/avatar", (req,res)=>{
     res.sendFile("avatar.html", {root: 'public/'});
 });
 
-app.get("/sentidos", (req,res)=>{
+app.get("/sentido", (req,res)=>{
     res.sendFile("sentidos.html", {root: 'public/'});
 });
+
+// Rutas Sentido Escucha
+app.get("/escucha", (req,res)=>{
+    res.sendFile("index.html", {root:"public/sentidos/escucha"});
+});
+
+app.post("/escucha", (req,res)=>{
+    let body=req.body;
+    let question=new Question({
+        user_id:body.id,
+        sense:body.sense,
+        answer:body.answer
+    })
+
+    question.save((err,answerStored)=>{
+        if(err){
+            return res.status(400).json({
+                ok:false,
+                message:err
+            });
+        }
+
+        return res.status(200).json({
+            ok:true,
+            message:"Felicidades, has alcanzado un nuevo nivel de exploración."
+        });
+    });
+});
+// 
 
 app.post("/registro", (req,res)=>{
     let body=req.body;

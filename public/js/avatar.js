@@ -61,7 +61,7 @@ $(document).ready(function(){
                   console.log(response.message);
               }else{
                   localStorage.setItem('userAvatar', image);
-                  window.location="/sentidos";
+                  window.location="sentido";
               }
           })
           .catch(function(err){
