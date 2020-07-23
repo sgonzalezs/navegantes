@@ -60,3 +60,8 @@ body{
     box-shadow: 8px 9px 17px -4px rgba(0,0,0,0.75);
 }
 
+.btnSend:focus, .btnContinue:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+}
+

@@ -5,6 +5,16 @@ body{
     background-repeat:no-repeat;
     background-size: 100% 100vh;
 }
+
+@media only screen and (max-width: 800px) {
+    body {
+        background-size: 100% 150%;
+    }
+    .avatarSelect img{
+        width: 24%;
+        height: 40vh;
+    }
+}
 /*  */
 
 /*-------------- Estilo menu principal -------------------*/
@@ -63,7 +73,7 @@ body{
 
 .avatarSelect img{
     width: 24%;
-    height: 50vh;
+    height: 40vh;
     transition: transform 0.2s;
 }
 
@@ -89,13 +99,8 @@ body{
     font-size: 15px;
 }
 
-.buttonGroup{
+.btnAvatar{
     font-family: 'Bungee', cursive;
-    margin-left: 40%;
-    margin-top: 8%;
-}
-
-.buttonGroup button{
     background-image: url('../images/avatar/Fondo.png');
     background-size: cover;
     background-repeat:no-repeat;
@@ -105,9 +110,11 @@ body{
     box-shadow: 8px 9px 17px -4px rgba(0,0,0,0.75);
     padding:5px 10px;
     color:#ffffff;
+    margin-left: 33%;
+    margin-top: 10%;
 }
 
-.buttonGroup button:focus{
+.btnAvatar:focus{
     outline:none !important;
     outline-width: 0 !important;
 }
