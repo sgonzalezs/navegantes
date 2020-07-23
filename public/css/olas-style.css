@@ -16,7 +16,6 @@ body{
 section .avatar img{
 	position: absolute;
 	width: 30%;
-	height: 400px;
 	bottom: 0;
 	left: 0;
 	z-index: 1000;
@@ -24,11 +23,16 @@ section .avatar img{
 	animation-delay: 0s;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1080px) {
   	section .avatar img{
 		width: 30%;
-		height: 200px;
 	}	
+}
+
+@media only screen and (max-width: 600px) {
+    section .avatar img{
+      width: 45%;
+  }	
 }
 
 /*-----------------------------------------------------*/
@@ -40,9 +44,9 @@ section .wave.wave1{
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 100px;
+	height: 15vh;
 	background: url('../images/olas/wave_1.png');
-	background-size: 1000px 100px;
+	background-size: 1000px 15vh;
 }
 
 section .wave.wave2{
@@ -50,9 +54,9 @@ section .wave.wave2{
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 110px;
+	height: 15vh;
 	background: url('../images/olas/wave_2.png');
-	background-size: 1000px 110px;
+	background-size: 1000px 15vh;
 }
 
 section .wave.wave3{
@@ -60,9 +64,9 @@ section .wave.wave3{
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 130px;
+	height: 15vh;
 	background: url('../images/olas/wave_3.png');
-	background-size: 1000px 130px;
+	background-size: 1000px 16vh;
 }
 
 /*---------------------------------------------------------*/
