@@ -41,6 +41,11 @@ app.get("/olfato", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/olfato"});
 });
 
+// Ruras Sentido Gusto
+app.get("/gusto", (req,res)=>{
+    res.sendFile("index.html", {root:"public/sentidos/gusto"});
+});
+
 app.post("/respuesta", (req,res)=>{
     let body=req.body;
     let question=new Question({

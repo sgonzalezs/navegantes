@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Elige tu sentido favorito</title>
+    <title>Sentido de la vista</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script>
         if(!localStorage.getItem('token')){
@@ -15,9 +15,10 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href='./css/style.css'>
     <link rel='stylesheet' type='text/css' href='./css/avatar-style.css'>
-    <link rel='stylesheet' type='text/css' href='./css/sentidos-style.css'>
+    <link rel='stylesheet' type='text/css' href='./css/escucha-style.css'>
 </head>
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg navAvatar">
@@ -31,44 +32,39 @@
               <a class="nav-item nav-link active" href="#"><p>EVENTOS</p></a>
             </div>
         </div>
-        <div class="avatarSelected" id="avatarUser">
+        <div class="avatarSelected">
             <img src="" width="80px">
         </div>
     </nav>
-    <section class="conatiner">
-        <section class="row m-2">
-            <div class="col-sm-12">
-                <div class="row contentSentidos">
-                    <div class="col-sm-8 contentSentidosImg">
-                        <a href="/escucha">
-                            <img src="./images/sentidos/escucha.png">
-                        </a>
-                        <a href="/vista">
-                            <img src="./images/sentidos/vista.png">
-                        </a>
-                        <a href="/tacto">
-                            <img src="./images/sentidos/tacto.png">
-                        </a>
-                        <a href="/olfato">
-                            <img src="./images/sentidos/olfato.png">
-                        </a>
-                        <a href="/gusto">
-                            <img src="./images/sentidos/gusto.png">
-                        </a>
-                    </div>
-                    <div class="col-sm-4 contentSentidosDesc">
-                        <h1>Selecciona tu sentido favorito</h1>
-                        <p>
-                            A través de ellos nos comunicamos con el mundo exterior. 
-                            Antes de entender lo que nos rodea, vamos a explorar nuestros sentidos. 
-                            Elige uno y comienza este viaje.
-                        </p>
-                    </div>
+    <section class="container-fluid">
+        <section class="row content">
+            <div class="col-sm-8">
+                <video class="videoLoad" autoplay controls>
+                    <source src="../../media/sentidos/vista/ejemplo1.mp4" type="video/mp4">
+                    Este navegador no es compatible con la reproducción de vídeos.
+                </video>
+            </div>  
+            <div class="col-sm-4">
+                <form id="formGusto">
+                    <h2 class="text-white title">GUSTO</h2>
+                    <p class="subTitle">
+                        Mira el video, conoce más sobre el sentido del gusto y responde: 
+                    </p>
+                    <p id="questionGusto">
+                    </p>
+                    <textarea class="answer" id="txtAnswerGusto" required></textarea>
+                    <button type="Submit" class="btnSend">RESPONDER</button>
+                </form>
+                <div class="alert alert-primary mt-2 alert" role="alert" style="display:none;">
+                    
                 </div>
+                <a href="/sentido">
+                    <button class="btnContinue" type="button" style="display: none;">Continuar</button>      
+                </a> 
             </div>
         </section>
     </section>
-
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
         crossorigin="anonymous">
@@ -81,6 +77,6 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
         crossorigin="anonymous">
     </script>
-    <script src="./js/sentidos.js"></script>
+    <script src="../../js/gusto.js"></script>
 </body>
 </html>
