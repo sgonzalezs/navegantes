@@ -16,8 +16,9 @@ app.listen(port, (err)=>{
     if(err){
         return console.log(err);
     }
-    // mongodb://localhost:27017/db_navegantes
-    mongoose.connect('mongodb://navegantes:navegantes_1@ds133670.mlab.com:33670/db_navegantes', {useNewUrlParser:true, useUnifiedTopology:true}, (errConn)=>{
+    let local='mongodb://localhost:27017/db_navegantes';
+    let web='mongodb://navegantes:navegantes_1@ds133670.mlab.com:33670/db_navegantes';
+    mongoose.connect(local, {useNewUrlParser:true, useUnifiedTopology:true}, (errConn)=>{
         if(errConn){
             return console.log(errConn);
         }
