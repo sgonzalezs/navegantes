@@ -1,16 +1,16 @@
 $(document).ready(function(){
     getAvatarUser();
     let identity=JSON.parse(localStorage.getItem('identity'));
-    
-    $("#questionTacto").text();
-    $("#questionTacto").text("Con la Covid-19 se está replanteando a nivel mundial el contacto físico con los demás ¿cómo sientes que esto ha afectado tu relación con tus amigos más cercanos?.");
 
-    $("#formTacto").on("submit", function(e){
+    $("#questionOlfato").text();
+    $("#questionOlfato").text("¿Tienes a alguien para recordar? ¿con qué olor lo identificas?");
+
+    $("#formOlfato").on("submit", function(e){
         e.preventDefault();
         let data={
             id:identity._id,
-            answer:$("#txtAnswerTacto").val(),
-            sense:'tacto'
+            answer:$("#txtAnswerOlfato").val(),
+            sense:'olfato'
         }
 
         fetch('/respuesta', {

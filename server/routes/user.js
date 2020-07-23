@@ -36,6 +36,11 @@ app.get("/tacto", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/tacto"});
 });
 
+// Rutas Sentido Olfato
+app.get("/olfato", (req,res)=>{
+    res.sendFile("index.html", {root:"public/sentidos/olfato"});
+});
+
 app.post("/respuesta", (req,res)=>{
     let body=req.body;
     let question=new Question({
