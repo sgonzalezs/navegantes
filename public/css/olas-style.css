@@ -1,0 +1,140 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: url('../images/fondo/back_clean.png');
+	background-size:cover; 
+	overflow: hidden;
+}
+
+/*Imagen Pirata*/
+section .avatar img{
+	position: absolute;
+	width: 30%;
+	height: 400px;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 1;
+	animation-delay: 0s;
+}
+
+@media only screen and (max-width: 600px) {
+  	section .avatar img{
+		width: 30%;
+		height: 200px;
+	}	
+}
+
+/*-----------------------------------------------------*/
+
+/*Load Background and config*/
+
+section .wave.wave1{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url('../images/olas/wave_1.png');
+	background-size: 1000px 100px;
+}
+
+section .wave.wave2{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 110px;
+	background: url('../images/olas/wave_2.png');
+	background-size: 1000px 110px;
+}
+
+section .wave.wave3{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 130px;
+	background: url('../images/olas/wave_3.png');
+	background-size: 1000px 130px;
+}
+
+/*---------------------------------------------------------*/
+
+/*Load waves animation */
+
+body{
+    animation: animateBackground 30s linear infinite;
+	z-index: 1000;
+	opacity: 1;
+	animation-delay: 0s;
+	bottom: 0; 
+}
+
+section .wave.wave1{
+	animation: animateWave 30s linear infinite;
+	z-index: 1000;
+	opacity: 1;
+	animation-delay: 0s;
+	bottom: 0; 
+}
+
+section .wave.wave2{
+	animation: animateWave2 15s linear infinite;
+	z-index: 999;
+	opacity: 1;
+	animation-delay: -5s;
+	bottom: 10px; 
+}
+
+section .wave.wave3{
+	animation: animateWave3 15s linear infinite;
+	z-index: 998;
+	opacity: 1;
+	animation-delay: -2s;
+	bottom: 0px; 
+}
+
+@keyframes animateWave{
+	0%{
+		background-position-x: 0;
+	}
+	100%{
+		background-position-x: 1000px;
+	}
+}
+
+@keyframes animateWave2{
+	0%{
+		background-position-x: 0;
+	}
+	100%{
+		background-position-x: -1000px;
+	}
+}
+
+@keyframes animateWave3{
+	0%{
+		background-position-x: 0;
+	}
+	100%{
+		background-position-x: 1000px;
+	}
+}
+
+/* @keyframes animateBackground{
+    0%{
+		background-position-x: 0;
+	}
+	100%{
+		background-position-x: 1000px;
+	}
+} */
+
+/*---------------------------------------------------------*/
