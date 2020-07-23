@@ -24,7 +24,7 @@ section .avatar img{
 	animation-delay: 0s;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   	section .avatar img{
 		width: 30%;
 		height: 200px;
@@ -69,13 +69,13 @@ section .wave.wave3{
 
 /*Load waves animation */
 
-body{
+/* body{
     animation: animateBackground 30s linear infinite;
 	z-index: 1000;
 	opacity: 1;
 	animation-delay: 0s;
 	bottom: 0; 
-}
+} */
 
 section .wave.wave1{
 	animation: animateWave 30s linear infinite;
