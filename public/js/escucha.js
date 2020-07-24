@@ -16,7 +16,8 @@ $(document).ready(function(){
         let data={
             id:identity._id,
             answer:$("#txtAnswer").val(),
-            sense:'escucha'
+            sense:'escucha',
+            activity:'reflexion'
         }
 
         fetch('/respuesta', {
@@ -92,7 +93,8 @@ function answerMusica(identity){
         let data={
             id:identity._id,
             answer:track,
-            sense:'escucha'
+            sense:'escucha',
+            activity:'seleccion'
         }
         fetch('/respuesta', {
             method: 'POST', 

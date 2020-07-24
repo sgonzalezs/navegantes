@@ -10,7 +10,8 @@ $(document).ready(function(){
         let data={
             id:identity._id,
             answer:$("#txtAnswerGusto").val(),
-            sense:'gusto'
+            sense:'gusto',
+            activity:'reflexion'
         }
 
         fetch('/respuesta', {

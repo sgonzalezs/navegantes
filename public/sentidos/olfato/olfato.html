@@ -17,8 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
     <!-- <link rel='stylesheet' type='text/css' href='./css/style.css'> -->
-    <link rel='stylesheet' type='text/css' href='../../css/avatar-style.css'>
+    <link rel='stylesheet' type='text/css' href='../../css/navbar.css'>
     <link rel='stylesheet' type='text/css' href='../../css/escucha-style.css'>
+    <link rel='stylesheet' type='text/css' href='../../css/olfato-style.css'>
 </head>
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg navAvatar">
@@ -38,28 +39,42 @@
     </nav>
     <section class="container-fluid">
         <section class="row content">
-            <div class="col-sm-8">
-                <video class="videoLoad" autoplay controls>
-                    <source src="../../media/sentidos/vista/ejemplo1.mp4" type="video/mp4">
-                    Este navegador no es compatible con la reproducción de vídeos.
-                </video>
-            </div>  
-            <div class="col-sm-4">
+            <div class="col-sm-7">
+                <div class="row">
+                    <div class="btn col-sm-6 olfatoContent olfatoContent1" value="olfato1">
+                    
+                    </div>
+                    <div class="btn col-sm-6 olfatoContent olfatoContent2" value="olfato2">
+    
+                    </div>
+                    <div class="btn col-sm-6 olfatoContent olfatoContent3" value="olfato3">
+    
+                    </div>
+                    <div class="btn col-sm-6 olfatoContent olfatoContent4" value="olfato4">
+    
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 offset-sm-1">
                 <form id="formOlfato">
                     <h2 class="text-white title">OLFATO</h2>
                     <p class="subTitle">
-                        Mira el video, conoce más sobre el sentido del olfato y responde: 
+                        El olfato nos permite evocar memorias pasadas, hagamos el intento de cerrar los ojos y 
+                        tomar una bocanada de aire pensando en estas situaciones sencillas.
+                        Elige entre las opciones el olor característico que más se parezca al que imaginaste:
                     </p>
-                    <p id="questionOlfato">
+                    <p id="">
+                        (Item 1) Alguien olvidó guardar la leche en la nevera la noche anterior.<br />
+                        (Item 2) Saliste a caminar fuera de la ciudad a un lugar cubierto por la naturaleza.<br /> 
+                        (Item 3) Sales en tu bicicleta a andar por la ciudad y empieza a llover.<br />
+                        (Item 4) Visitas a tu abuela en su vieja casa.
                     </p>
-                    <textarea class="answer" id="txtAnswerOlfato" required></textarea>
-                    <button type="Submit" class="btnSend">RESPONDER</button>
                 </form>
-                <div class="alert alert-primary mt-2 alert" role="alert" style="display:none;">
+                <!-- <div class="alert alert-primary mt-2 alert" role="alert" style="display:none;">
                     
-                </div>
-                <a href="/sentido">
-                    <button class="btnContinue" type="button" style="display: none;">Continuar</button>      
+                </div> -->
+                <a href="/olfato-reflexion">
+                    <button class="btnContinue" type="button" style="display: none;">Siguiente</button>      
                 </a> 
             </div>
         </section>

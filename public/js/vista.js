@@ -15,7 +15,8 @@ $(document).ready(function(){
         let data={
             id:identity._id,
             answer:$("#txtAnswerVista").val(),
-            sense:'vista'
+            sense:'vista',
+            activity:'reflexion'
         }
 
         fetch('/respuesta', {

@@ -1,7 +1,7 @@
 $(document).ready(function(){
     getAvatarUser();
     let identity=JSON.parse(localStorage.getItem('identity'));
-
+    answerOlfato(identity);
     $("#questionOlfato").text();
     $("#questionOlfato").text("¿Tienes a alguien para recordar? ¿con qué olor lo identificas?");
 
@@ -10,7 +10,8 @@ $(document).ready(function(){
         let data={
             id:identity._id,
             answer:$("#txtAnswerOlfato").val(),
-            sense:'olfato'
+            sense:'olfato',
+            activity:'reflexion'
         }
 
         fetch('/respuesta', {
@@ -75,4 +76,40 @@ function getAvatarUser(){
             });
         break;
     }
+}
+
+function answerOlfato(identity){
+    $(".olfatoContent").click(function(){
+        let smell=$(this).attr("value");
+
+        let data={
+            id:identity._id,
+            answer:smell,
+            sense:'olfato',
+            activity:'seleccion'
+        }
+
+        fetch('/respuesta', {
+            method: 'POST', 
+            body: JSON.stringify(data),
+            headers:{
+              'Content-Type': 'application/json'
+            }
+          })
+        .then(function(res){
+            return res.json();
+        })
+        .then(function(response){
+            if(!response.ok){
+                console.log(response.message);
+            }else{
+                // $(".olfatoContent").attr("disabled", true);
+                $(".olfatoContent").css("pointer-events", "none");
+                $(".btnContinue").css("display", "block");
+            }
+        })
+        .catch(function(err){
+            console.log('Error:', err)
+        });
+    });
 }

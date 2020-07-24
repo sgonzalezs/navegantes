@@ -42,6 +42,10 @@ app.get("/vista", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/vista"});
 });
 
+app.get("/vista-recompensas", (req,res)=>{
+    res.sendFile("recompensas.html", {root:"public/sentidos/vista"});
+});
+
 // Rutas Sentido Tacto
 app.get("/tacto", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/tacto"});
@@ -49,6 +53,10 @@ app.get("/tacto", (req,res)=>{
 
 // Rutas Sentido Olfato
 app.get("/olfato", (req,res)=>{
+    res.sendFile("olfato.html", {root:"public/sentidos/olfato"});
+});
+
+app.get("/olfato-reflexion", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/olfato"});
 });
 
@@ -62,7 +70,8 @@ app.post("/respuesta", (req,res)=>{
     let question=new Question({
         user_id:body.id,
         sense:body.sense,
-        answer:body.answer
+        answer:body.answer,
+        activity:body.activity
     })
 
     question.save((err,answerStored)=>{

@@ -1,0 +1,65 @@
+.navAvatar{
+    background-image: url('../images/avatar/navbar.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    opacity: 0.9;
+    font-family: 'Bungee', cursive;
+    font-size: 20px;
+    color: #ffffff;
+    position: relative;
+}
+
+@media only screen and (max-width: 800px){
+    .navAvatar{
+        background-image: url('../images/avatar/Fondo.png');
+    }
+    #navbarNavAltMarkup{
+        margin-left:0px;
+    }
+    .navAvatar p{
+        margin-top: 0px;
+    }
+    .currentNav{
+        margin:0 0px 0 0px;
+        border-left: 0px;
+        border-right: 0px;
+    }
+    
+    .currentNav p{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+#navbarNavAltMarkup{
+    margin-left:23%;
+}
+
+.navAvatar p{
+    margin-top: 25px;
+}
+
+.avatarSelected{
+    width: 90px;
+    height: 90px;
+    margin-right: 90px;
+    position: relative;
+    border-radius: 100px;
+    background: #ffffff;
+}
+
+.avatarSelected img{
+    margin-left: 10px;
+    height: auto;
+}
+
+.currentNav{
+    margin:0 60px 0 60px;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.currentNav p{
+    padding-left: 50px;
+    padding-right: 50px;
+}
