@@ -2,7 +2,7 @@ body{
     background-image: url('../images/avatar/fondo_2.png');
     background-size: cover;
     background-repeat:no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 110%;
 }
 
 @media only screen and (max-width: 800px) {
