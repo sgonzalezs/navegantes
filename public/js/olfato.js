@@ -28,8 +28,8 @@ $(document).ready(function(){
               if(!response.ok){
                   console.log(response.message);
               }else{
-                  $(".alert").css("display", "block");
-                  $(".alert").text(response.message);
+                //   $(".alert").css("display", "block");
+                //   $(".alert").text(response.message);
                   $(".btnContinue").css("display", "block");
               }
           })
@@ -103,7 +103,6 @@ function answerOlfato(identity){
             if(!response.ok){
                 console.log(response.message);
             }else{
-                // $(".olfatoContent").attr("disabled", true);
                 $(".olfatoContent").css("pointer-events", "none");
                 $(".btnContinue").css("display", "block");
             }

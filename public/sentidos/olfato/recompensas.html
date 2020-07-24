@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Sentido de la vista</title>
+    <title>Recompensas</title>
     <!-- <meta name='viewport' content='width=device-width, initial-scale=1'> -->
     <script>
         if(!localStorage.getItem('token')){
@@ -37,34 +37,25 @@
         </div>
     </nav>
     <section class="container-fluid">
+        <div class="avatarLoaded">
+            <img src="" alt="Pirata Seleccionado">
+        </div>
+        <div class="trophyEscucha">
+            <img src="../../images/sentidos/olfato/premios/chaqueta.png">
+        </div>
         <section class="row content">
-            <div class="col-sm-8">
-                <video class="videoLoad" autoplay controls>
-                    <source src="../../media/sentidos/vista/ejemplo1.mp4" type="video/mp4">
-                    Este navegador no es compatible con la reproducción de vídeos.
-                </video>
-            </div>  
-            <div class="col-sm-4">
-                <form id="formOlfato">
-                    <h2 class="text-white title">OLFATO</h2>
-                    <p class="subTitle">
-                        Mira el video, conoce más sobre el sentido del olfato y responde: 
-                    </p>
-                    <p id="questionOlfato">
-                    </p>
-                    <textarea class="answer" id="txtAnswerOlfato" required></textarea>
-                    <button type="Submit" class="btnSend">RESPONDER</button>
-                </form>
-                <!-- <div class="alert alert-primary mt-2 alert" role="alert" style="display:none;">
-                    
-                </div> -->
-                <a href="/olfato-recompensas">
-                    <button class="btnContinue" type="button" style="display: none;">Continuar</button>      
-                </a> 
+            <div class="col-sm-4 offset-sm-8">
+                <h2 class="text-white title">OLFATO</h2>
+                <p id="success">
+                    Felicidades, has alcanzado un nuevo nivel de exploración.
+                </p>
+                <a href="/sentido">
+                    <button type="button" class=" btnReflexion">Siguiente</button>
+                </a>
             </div>
         </section>
     </section>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
         crossorigin="anonymous">
@@ -77,6 +68,6 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
         crossorigin="anonymous">
     </script>
-    <script src="../../js/olfato.js"></script>
+    <script src="../../js/escucha.js"></script>
 </body>
 </html>

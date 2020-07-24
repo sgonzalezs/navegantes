@@ -45,13 +45,15 @@ app.get("/vista", (req,res)=>{
 app.get("/vista-recompensas", (req,res)=>{
     res.sendFile("recompensas.html", {root:"public/sentidos/vista"});
 });
+// ----------------------------------------
 
 // Rutas Sentido Tacto
 app.get("/tacto", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/tacto"});
 });
+// -------------------------------------------
 
-// Rutas Sentido Olfato
+// Rutas Sentido Olfato------------------------------
 app.get("/olfato", (req,res)=>{
     res.sendFile("olfato.html", {root:"public/sentidos/olfato"});
 });
@@ -59,6 +61,11 @@ app.get("/olfato", (req,res)=>{
 app.get("/olfato-reflexion", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/olfato"});
 });
+
+app.get("/olfato-recompensas", (req,res)=>{
+    res.sendFile("recompensas.html", {root:"public/sentidos/olfato"});
+});
+// --------------------------------------------------
 
 // Ruras Sentido Gusto
 app.get("/gusto", (req,res)=>{
