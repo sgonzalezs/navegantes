@@ -100,15 +100,16 @@ div.audio audio{
 
 .avatarLoaded img{
     position: absolute;
-    width: 40%;
+    width: 33%;
     bottom: 0;
     left:0;
 }
 
 .trophyEscucha img{
     position: absolute;
-    width: 30%;
+    width: 25%;
     left:35%;
+    margin-top:20px;
 }
 
 

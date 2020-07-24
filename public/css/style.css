@@ -5,6 +5,12 @@ body{
     background-size: 100% 100vh;
 }
 
+@media only screen and (max-width: 800px) {
+    body {
+        background-size: 100% 150%;
+    }
+}
+
 .formLogin{
     position: relative;
     margin-top: 30%;
