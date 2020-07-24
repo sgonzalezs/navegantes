@@ -29,6 +29,28 @@ body{
     position: relative;
 }
 
+@media only screen and (max-width: 800px){
+    .navAvatar{
+        background-image: url('../images/avatar/Fondo.png');
+    }
+    #navbarNavAltMarkup{
+        margin-left:0px;
+    }
+    .navAvatar p{
+        margin-top: 0px;
+    }
+    .currentNav{
+        margin:0 0px 0 0px;
+        border-left: 0px;
+        border-right: 0px;
+    }
+    
+    .currentNav p{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
 #navbarNavAltMarkup{
     margin-left:23%;
 }
