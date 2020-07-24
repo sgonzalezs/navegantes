@@ -1,6 +1,7 @@
 $(document).ready(function(){
-    getAvatarUser();
     let identity=JSON.parse(localStorage.getItem('identity'));
+    getAvatarUser();
+    answerMusica(identity);
     let age=identity.age;
     
     $("#questionEscucha").text();
@@ -53,6 +54,7 @@ function getAvatarUser(){
                 "width": "80px",
                 "margin":"0px 0px 0px 10px"
             });
+            $(".avatarLoaded img").attr("src", "./images/sentidos/escucha/premios/pirata.png");
         break;
 
         case "pirataMin_2.png":
@@ -61,6 +63,7 @@ function getAvatarUser(){
                 "width": "80px",
                 "margin":"0px 0px 0px 10px"
             });
+            $(".avatarLoaded img").attr("src", "./images/sentidos/escucha/premios/pirata_2.png");
         break;
 
         case "pirataMin_3.png":
@@ -69,6 +72,7 @@ function getAvatarUser(){
                 "width": "70px",
                 "margin":"0px 0px 0px 10px"
             });
+            $(".avatarLoaded img").attr("src", "./images/sentidos/escucha/premios/pirata_3.png");
         break;
 
         case "pirataMin_4.png":
@@ -77,6 +81,40 @@ function getAvatarUser(){
                 "width":"55px", 
                 "margin":"6px 0px 0px 15px"
             });
+            $(".avatarLoaded img").attr("src", "./images/sentidos/escucha/premios/pirata_4.png");
         break;
     }
+}
+
+function answerMusica(identity){
+    $(".btnAudio").click(function(){
+        let track=$(this).attr("value");
+        let data={
+            id:identity._id,
+            answer:track,
+            sense:'escucha'
+        }
+        fetch('/respuesta', {
+            method: 'POST', 
+            body: JSON.stringify(data),
+            headers:{
+              'Content-Type': 'application/json'
+            }
+        })
+        .then(function(res){
+            return res.json();
+        })
+        .then(function(response){
+            if(!response.ok){
+                console.log(response.message);
+            }else{
+                $(".btnAudio").attr("disabled", true);
+                $(".btnContinue").css("display", "block");
+            }
+        })
+        .catch(function(err){
+            console.log('Error:', err)
+        });
+        console.log(track);
+    });
 }

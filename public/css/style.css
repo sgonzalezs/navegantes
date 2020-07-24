@@ -1,9 +1,9 @@
-/* body{
-    background-image: url('../images/fondo/back_clean.png');
+body{
+    background-image: url('../images/fondo/FondoCompleto.png');
     background-size: cover;
     background-repeat:no-repeat;
     background-size: 100% 100vh;
-} */
+}
 
 .formLogin{
     position: relative;

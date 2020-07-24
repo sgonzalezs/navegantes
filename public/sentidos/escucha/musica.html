@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Estilos Musicales</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <meta name='viewport' content='width=device-width, initial-scale=1'> -->
     <script>
         if(!localStorage.getItem('token')){
             window.location="/";
@@ -27,7 +27,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="/"><p>INICIO</p> </a>
+              <a class="nav-item nav-link active" href="/sentido"><p>INICIO</p> </a>
               <a class="nav-item nav-link active currentNav" href="#"><p>RETA A UN AMIGO</p></a>
               <a class="nav-item nav-link active" href="#"><p>EVENTOS</p></a>
             </div>
@@ -39,27 +39,35 @@
     <section class="container-fluid">
         <section class="row content">
             <div class="col-sm-8">
-                <video class="videoLoad" autoplay controls>
-                    <source src="../../media/sentidos/escucha/ejemplo1.mp4" type="video/mp4">
-                    Este navegador no es compatible con la reproducción de vídeos.
-                </video>
+                <div class="form-group audio audio1">
+                    <audio controls>
+                        <source src="../../images/sentidos/escucha/Audios/track1.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="form-group audio audio2">
+                    <audio src="../../images/sentidos/escucha/Audios/track2.mp3" preload="auto" controls></audio>
+                </div>
+                <div class="form-group audio audio3">
+                    <audio src="../../images/sentidos/escucha/Audios/track3.mp3" preload="auto" controls></audio>
+                </div>
+                <div class="form-group audio audio4">
+                    <audio src="../../images/sentidos/escucha/Audios/track4.mp3" preload="auto" controls></audio>
+                </div>
             </div>  
             <div class="col-sm-4">
-                <!-- <form id="formEscucha">
-                    <h2 class="text-white title">ESCUCHA</h2>
-                    <p class="subTitle">
-                        Mira el video, conoce más sobre el sentido de la escucha y responde:
-                    </p>
-                    <p id="questionEscucha">
-                    </p>
-                    <textarea class="answer" id="txtAnswer" required></textarea>
-                    <button type="Submit" class="btnSend">RESPONDER</button>
-                </form> -->
-                <div class="alert alert-primary mt-2" role="alert" style="display:none;">
-                    
-                </div>
-                <a href="/sentido">
-                    <button class="btnContinue" type="button" style="display: none;">Continuar</button>      
+                <h2 class="text-white title">ESCUCHA</h2>
+                <!-- <p class="subTitle">
+                    Mira el video, conoce más sobre el sentido de la escucha y responde:
+                </p> -->
+                <p id="questionMusica">
+                    En este juego aprenderemos que todos tenemos gustos diferentes. Escucha los fragmentos de canciones y selecciona tu favorita. 
+                </p>
+                <button type="button" value="audio1" class="btn btn-secondary m-1 btnAudio">Audio 1</button>
+                <button type="button" value="audio2" class="btn btn-secondary m-1 btnAudio">Audio 2</button>
+                <button type="button" value="audio3" class="btn btn-secondary m-1 btnAudio">Audio 3</button>
+                <button type="button" value="audio4" class="btn btn-secondary m-1 btnAudio">Audio 4</button>
+                <a href="/escucha-reflexion">
+                    <button class="btnContinue" type="button" style="display: none;">Siguiente</button>      
                 </a> 
             </div>
         </section>

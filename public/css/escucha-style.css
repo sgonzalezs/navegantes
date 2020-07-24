@@ -2,8 +2,14 @@ body{
     background-image: url('../images/avatar/fondo_2.png');
     background-size: cover;
     background-repeat:no-repeat;
-    background-size: 100% 110%;
+    background-size: 100% 100vh;
 }
+
+/* @media only screen and (max-width: 1080px) {
+    body {
+        background-size: 100% 150%;
+    }
+} */
 
 .videoLoad{
     width: 100%;
@@ -64,4 +70,45 @@ body{
     outline:none !important;
     outline-width: 0 !important;
 }
+
+/* Estilo Reproductor de audio */
+div.audio audio{
+    width: 100%;
+    margin-top: 3%;
+}
+
+/* Estilo recompensas*/
+
+#success{
+    font-style: italic;
+    font-size: 18px;
+}
+
+.btnReflexion{
+    padding:15px;
+    background: #7136a1;
+    color:white;
+    border:0px;
+    border-radius: 5px;
+    width: 100%;
+    font-size:30px;
+    margin-top: 10px;
+}
+.btnReflexion:focus{
+    background: #7136a1;
+}
+
+.avatarLoaded img{
+    position: absolute;
+    width: 40%;
+    bottom: 0;
+    left:0;
+}
+
+.trophyEscucha img{
+    position: absolute;
+    width: 30%;
+    left:35%;
+}
+
 

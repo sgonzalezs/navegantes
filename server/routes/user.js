@@ -22,8 +22,19 @@ app.get("/sentido", (req,res)=>{
 
 // Rutas Sentido Escucha
 app.get("/escucha", (req,res)=>{
+    res.sendFile("musica.html", {root:"public/sentidos/escucha"});
+});
+app.get("/escucha-reflexion", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/escucha"});
 });
+
+app.get("/escucha-recompensas", (req,res)=>{
+    res.sendFile("recompensas.html", {root:"public/sentidos/escucha"});
+});
+
+// app.get("/sentido/escucha", (req,res)=>{
+//     res.sendFile("musica.html", {root:"public/sentidos/escucha"});
+// });
 // --------------------------------------
 
 //Rutas Sentido Vista
