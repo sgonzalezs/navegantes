@@ -31,7 +31,7 @@ body{
 
 @media only screen and (max-width: 800px){
     .navAvatar{
-        background-image: url('../images/avatar/Fondo.png');
+        background-image: url('../images/fondo/Fondo.png');
     }
     #navbarNavAltMarkup{
         margin-left:0px;
@@ -123,7 +123,7 @@ body{
 
 .btnAvatar{
     font-family: 'Bungee', cursive;
-    background-image: url('../images/avatar/Fondo.png');
+    background-image: url('../images/fondo/Fondo.png');
     background-size: cover;
     background-repeat:no-repeat;
     text-align: center;
