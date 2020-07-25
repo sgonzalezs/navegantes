@@ -1,0 +1,21 @@
+.paragraph{
+    font-style: italic;
+}
+
+.contentMain{
+    display: inline-block;
+}
+
+.gustoContent img{
+    width: 49%; 
+    transition: transform 0.1s;
+}
+
+.gustoContent img:hover{
+    transform:scale(1.03,1.03);
+}
+
+.gustoContent p{
+    font-family: 'Bungee', cursive;
+    color: #ffffff;
+}

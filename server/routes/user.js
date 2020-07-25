@@ -69,7 +69,15 @@ app.get("/olfato-recompensas", (req,res)=>{
 
 // Ruras Sentido Gusto
 app.get("/gusto", (req,res)=>{
+    res.sendFile("gusto.html", {root:"public/sentidos/gusto"});
+});
+app.get("/gusto-reflexion", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/gusto"});
+});
+
+// Configuracion
+app.get("/ajuste", (req,res)=>{
+    res.sendFile("ajuste.html", {root:"public/"});
 });
 
 app.post("/respuesta", (req,res)=>{
