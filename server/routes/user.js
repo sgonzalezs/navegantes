@@ -71,8 +71,13 @@ app.get("/olfato-recompensas", (req,res)=>{
 app.get("/gusto", (req,res)=>{
     res.sendFile("gusto.html", {root:"public/sentidos/gusto"});
 });
+
 app.get("/gusto-reflexion", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/gusto"});
+});
+
+app.get("/gusto-recompensas", (req,res)=>{
+    res.sendFile("recompensas.html", {root:"public/sentidos/gusto"});
 });
 
 // Configuracion
@@ -84,6 +89,7 @@ app.post("/respuesta", (req,res)=>{
     let body=req.body;
     let question=new Question({
         user_id:body.id,
+        question:body.question,
         sense:body.sense,
         answer:body.answer,
         activity:body.activity

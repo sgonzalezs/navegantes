@@ -8,6 +8,10 @@ let questionSchema=new Schema({
         required:true,
         type:String
     },
+    question:{
+        type:String,
+        required:[true, 'Debes ingresar la pregunta']
+    },
     sense:{
         type:String,
         required:true

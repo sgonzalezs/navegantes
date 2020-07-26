@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Sentido de la vista</title>
+    <title>Sentido del olfato</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script>
         if(!localStorage.getItem('token')){
@@ -39,23 +39,88 @@
     </nav>
     <section class="container-fluid">
         <section class="row content">
-            <div class="col-sm-7">
+            <div class="col-sm-8">
                 <div class="row">
-                    <div class="btn col-sm-6 olfatoContent olfatoContent1" value="olfato1">
-                    
+                    <div class="col-md-6 olfatoContent">
+                        <div class="row optionRow">
+                            <p>A</p>
+                            <div class="col-sm-5 option option1" value="">
+                                <a href="#">
+                                    <img src="../../images/sentidos/olfato/tipos/1/1_1.jpg" 
+                                        value="Alguien olvidó guardar la leche en la nevera la noche anterior.-option1A"
+                                    >
+                                </a>
+                            </div>
+                            <div class="col-sm-5 option option2" value="">
+                                <a href="#">
+                                    <img src="../../images/sentidos/olfato/tipos/1/1_2.jpg" 
+                                        value="Alguien olvidó guardar la leche en la nevera la noche anterior.-option2A"
+                                    />
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="btn col-sm-6 olfatoContent olfatoContent2" value="olfato2">
-    
+
+                    <div class="col-md-6 olfatoContent">
+                        <div class="row optionRow">
+                            <p>B</p>
+                            <div class="col-sm-5 option option1" value="">
+                                <a href="#">
+                                    <img src="../../images/sentidos/olfato/tipos/2/1_1.jpg" 
+                                        value="Saliste a caminar fuera de la ciudad a un lugar cubierto por la naturaleza.-option1B"
+                                    />
+                                </a>
+                            </div>
+                            <div class="col-sm-5 option option2" value="">
+                                <a href="#">
+                                    <img src="../../images/sentidos/olfato/tipos/2/1_2.jpg" 
+                                        value="Saliste a caminar fuera de la ciudad a un lugar cubierto por la naturaleza.-option2B"
+                                    />
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="btn col-sm-6 olfatoContent olfatoContent3" value="olfato3">
-    
+                    <div class="col-md-6 olfatoContent">
+                        <div class="row optionRow">
+                            <p>C</p>
+                            <div class="col-sm-5 option option1" value="">
+                                <a href="#">
+                                    <img src="../../images/sentidos/olfato/tipos/3/1_1.jpg" 
+                                        value="Sales en tu bicicleta a andar por la ciudad y empieza a llover.-option1C"
+                                        />
+                                </a>
+                            </div>
+                            <div class="col-sm-5 option option2" value="">
+                                <a href="#">
+                                    <img src="../../images/sentidos/olfato/tipos/3/1_2.jpg" 
+                                        value="Sales en tu bicicleta a andar por la ciudad y empieza a llover.-option2C"
+                                    />
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="btn col-sm-6 olfatoContent olfatoContent4" value="olfato4">
-    
+                    <div class="col-md-6 olfatoContent">
+                        <div class="row optionRow">
+                            <p>D</p>
+                            <div class="col-sm-5 option option1" value="">
+                                <a href="#">
+                                    <img src="../../images/sentidos/olfato/tipos/4/1_1.jpg" 
+                                        value="Visitas a tu abuela en su vieja casa.-option1D"
+                                    />
+                                </a>
+                            </div>
+                            <div class="col-sm-5 option option2" value="">
+                                <a href="#">
+                                    <img src="../../images/sentidos/olfato/tipos/4/1_2.jpg" 
+                                        value="Visitas a tu abuela en su vieja casa.-option2D"
+                                    />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4 offset-sm-1">
+            <div class="col-sm-4">
                 <form id="formOlfato">
                     <h2 class="text-white title">OLFATO</h2>
                     <p class="subTitle">
@@ -64,15 +129,15 @@
                         Elige entre las opciones el olor característico que más se parezca al que imaginaste:
                     </p>
                     <p id="">
-                        (Item 1) Alguien olvidó guardar la leche en la nevera la noche anterior.<br />
-                        (Item 2) Saliste a caminar fuera de la ciudad a un lugar cubierto por la naturaleza.<br /> 
-                        (Item 3) Sales en tu bicicleta a andar por la ciudad y empieza a llover.<br />
-                        (Item 4) Visitas a tu abuela en su vieja casa.
+                        <b>A - </b>Alguien olvidó guardar la leche en la nevera la noche anterior.<br />
+                        <b>B - </b>Saliste a caminar fuera de la ciudad a un lugar cubierto por la naturaleza.<br /> 
+                        <b>C - </b>Sales en tu bicicleta a andar por la ciudad y empieza a llover.<br />
+                        <b>D - </b>Visitas a tu abuela en su vieja casa.
                     </p>
                 </form>
-                <!-- <div class="alert alert-primary mt-2 alert" role="alert" style="display:none;">
+                <div class="alert alert-primary mt-2" role="alert" style="display:none;">
                     
-                </div> -->
+                </div>
                 <a href="/olfato-reflexion">
                     <button class="btnContinue" type="button" style="display: none;">Siguiente</button>      
                 </a> 
@@ -92,6 +157,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
         crossorigin="anonymous">
     </script>
-    <script src="../../js/olfato.js"></script>
+    <script src="../../js/olfato1.js"></script>
+    <script src="../../js/getAvatar.js"></script>
 </body>
 </html>

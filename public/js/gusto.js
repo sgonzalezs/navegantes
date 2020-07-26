@@ -10,6 +10,7 @@ $(document).ready(function(){
         let data={
             id:identity._id,
             answer:$("#txtAnswerGusto").val(),
+            question:$("#questionGusto").text(),
             sense:'gusto',
             activity:'reflexion'
         }

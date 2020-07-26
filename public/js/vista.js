@@ -15,6 +15,7 @@ $(document).ready(function(){
         let data={
             id:identity._id,
             answer:$("#txtAnswerVista").val(),
+            question:$("#questionVista").text(),
             sense:'vista',
             activity:'reflexion'
         }

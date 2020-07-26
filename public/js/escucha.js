@@ -16,6 +16,7 @@ $(document).ready(function(){
         let data={
             id:identity._id,
             answer:$("#txtAnswer").val(),
+            question:$("#questionEscucha").text(),
             sense:'escucha',
             activity:'reflexion'
         }
@@ -93,6 +94,7 @@ function answerMusica(identity){
         let data={
             id:identity._id,
             answer:track,
+            question:"Escucha los fragmentos de canciones y selecciona tu favorita.",
             sense:'escucha',
             activity:'seleccion'
         }
