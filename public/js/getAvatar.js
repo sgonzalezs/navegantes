@@ -12,6 +12,7 @@ function getAvatarUser(){
                 "width": "80px",
                 "margin":"0px 0px 0px 10px"
             });
+            $(".avatarLoaded img").attr("src", "./images/sentidos/pirata.png");
         break;
 
         case "pirataMin_2.png":
@@ -20,6 +21,7 @@ function getAvatarUser(){
                 "width": "80px",
                 "margin":"0px 0px 0px 10px"
             });
+            $(".avatarLoaded img").attr("src", "./images/sentidos/pirata_2.png");
         break;
 
         case "pirataMin_3.png":
@@ -28,6 +30,7 @@ function getAvatarUser(){
                 "width": "70px",
                 "margin":"0px 0px 0px 10px"
             });
+            $(".avatarLoaded img").attr("src", "./images/sentidos/pirata_3.png");
         break;
 
         case "pirataMin_4.png":
@@ -36,6 +39,7 @@ function getAvatarUser(){
                 "width":"55px", 
                 "margin":"6px 0px 0px 15px"
             });
+            $(".avatarLoaded img").attr("src", "./images/sentidos/pirata_4.png");
         break;
     }
 }

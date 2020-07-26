@@ -1,7 +1,6 @@
 $(document).ready(function(){
     let identity=JSON.parse(localStorage.getItem('identity'));
-    getAvatarUser();
-    answerMusica(identity);
+    
     let age=identity.age;
     
     $("#questionEscucha").text();
@@ -10,115 +9,54 @@ $(document).ready(function(){
     }else{
         $("#questionEscucha").text("¿Qué conflicto crees que se pudo evitar en tu barrio, si los involucrados se hubieran sentado a conversar, escuchando lo que el otro tiene para decir?");
     }
-
-    $("#formEscucha").on("submit", function(e){
-        e.preventDefault();
-        let data={
-            id:identity._id,
-            answer:$("#txtAnswer").val(),
-            question:$("#questionEscucha").text(),
-            sense:'escucha',
-            activity:'reflexion'
-        }
-
-        fetch('/respuesta', {
-            method: 'POST', 
-            body: JSON.stringify(data),
-            headers:{
-              'Content-Type': 'application/json'
+    let escucha=JSON.parse(localStorage.getItem('escucha'));
+    if(!escucha.activity_2){
+        $("#formEscucha").on("submit", function(e){
+            e.preventDefault();
+            let data={
+                id:identity._id,
+                answer:$("#txtAnswer").val(),
+                question:$("#questionEscucha").text(),
+                sense:'escucha',
+                activity:'reflexion'
             }
-          })
-          .then(function(res){
-              return res.json();
-          })
-          .then(function(response){
-              if(!response.ok){
-                  console.log(response.message);
-              }else{
-                  $(".alert").css("display", "block");
-                  $(".alert").text(response.message);
-                  $(".btnContinue").css("display", "block");
-              }
-          })
-          .catch(function(err){
-              console.log('Error:', err)
-          });
-    });
+    
+            fetch('/respuesta', {
+                method: 'POST', 
+                body: JSON.stringify(data),
+                headers:{
+                  'Content-Type': 'application/json'
+                }
+              })
+              .then(function(res){
+                  return res.json();
+              })
+              .then(function(response){
+                  if(!response.ok){
+                      console.log(response.message);
+                  }else{
+                      $(".alert").css("display", "block");
+                      $(".alert").text(response.message);
+                      $(".btnContinue").css("display", "block");
+                      localStorage.setItem('escucha', JSON.stringify(
+                        {
+                            user_id:identity._id, 
+                            sense:"escucha", 
+                            activity_1:true,
+                            activity_2:true
+                        }));
+                  }
+              })
+              .catch(function(err){
+                  console.log('Error:', err)
+              });
+        });
+    }else{
+        $(".alert").css("display", "block");
+        $(".alert").text("Ya has completado esta sección");
+        $(".btnContinue").css("display", "block");
+        $(".btnSend").attr("disabled", true);
+    }
+    
 });
 
-function getAvatarUser(){
-    let image=localStorage.getItem('userAvatar');
-
-    switch(image.split("/")[3]){
-        case "pirataMin_1.png":
-            $(".avatarSelected img").attr("src", image);
-            $(".avatarSelected img").css({
-                "width": "80px",
-                "margin":"0px 0px 0px 10px"
-            });
-            $(".avatarLoaded img").attr("src", "./images/sentidos/escucha/premios/pirata.png");
-        break;
-
-        case "pirataMin_2.png":
-            $(".avatarSelected img").attr("src", image);
-            $(".avatarSelected img").css({
-                "width": "80px",
-                "margin":"0px 0px 0px 10px"
-            });
-            $(".avatarLoaded img").attr("src", "./images/sentidos/escucha/premios/pirata_2.png");
-        break;
-
-        case "pirataMin_3.png":
-            $(".avatarSelected img").attr("src", image);
-            $(".avatarSelected img").css({
-                "width": "70px",
-                "margin":"0px 0px 0px 10px"
-            });
-            $(".avatarLoaded img").attr("src", "./images/sentidos/escucha/premios/pirata_3.png");
-        break;
-
-        case "pirataMin_4.png":
-            $(".avatarSelected img").attr("src", image);
-            $(".avatarSelected img").css({
-                "width":"55px", 
-                "margin":"6px 0px 0px 15px"
-            });
-            $(".avatarLoaded img").attr("src", "./images/sentidos/escucha/premios/pirata_4.png");
-        break;
-    }
-}
-
-function answerMusica(identity){
-    $(".btnAudio").click(function(){
-        let track=$(this).attr("value");
-        let data={
-            id:identity._id,
-            answer:track,
-            question:"Escucha los fragmentos de canciones y selecciona tu favorita.",
-            sense:'escucha',
-            activity:'seleccion'
-        }
-        fetch('/respuesta', {
-            method: 'POST', 
-            body: JSON.stringify(data),
-            headers:{
-              'Content-Type': 'application/json'
-            }
-        })
-        .then(function(res){
-            return res.json();
-        })
-        .then(function(response){
-            if(!response.ok){
-                console.log(response.message);
-            }else{
-                $(".btnAudio").attr("disabled", true);
-                $(".btnContinue").css("display", "block");
-            }
-        })
-        .catch(function(err){
-            console.log('Error:', err)
-        });
-        console.log(track);
-    });
-}
