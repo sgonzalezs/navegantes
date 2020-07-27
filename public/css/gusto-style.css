@@ -1,3 +1,16 @@
+body{
+    background-image: url('../images/avatar/fondo_2.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-size: 100% 150%;
+}
+
+@media only screen and (max-width: 1080px) {
+    body {
+        background-size: 100% 150%;
+    }
+}
+
 .paragraph{
     font-style: italic;
 }
@@ -6,16 +19,42 @@
     display: inline-block;
 }
 
-.gustoContent img{
-    width: 49%; 
-    transition: transform 0.1s;
+.option img{
+    margin-top: 10px;
+    width: 100%;
+    transition: transform 0.5s;
 }
-
-.gustoContent img:hover{
-    transform:scale(1.03,1.03);
+.option img:hover{
+    transform:scale(1.04, 1.04);
 }
 
 .gustoContent p{
     font-family: 'Bungee', cursive;
+    font-size:25px;
     color: #ffffff;
+}
+.gustoContent p{
+    font-family: 'Bungee', cursive;
+    color: #ffffff;
+}
+
+.btnSend, .btnContinue{
+    background-image: url('../images/avatar/Fondo.png');
+    background-size: cover;
+    padding:5px;
+    width:150px;
+    margin:auto;
+    font-family: 'Bungee', cursive;
+    color:#ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 20%;
+    margin-top:10px;
+    box-shadow: 8px 9px 17px -4px rgba(0,0,0,0.75);
+}
+
+.btnSend:focus, .btnContinue:focus{
+    outline:none !important;
+    outline-width: 0 !important;
 }
