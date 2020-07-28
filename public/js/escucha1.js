@@ -42,7 +42,6 @@ function answerMusica(identity){
             .catch(function(err){
                 console.log('Error:', err)
             });
-            console.log(track);
         });
     }else{
         $(".btnAudio").attr("disabled", true);

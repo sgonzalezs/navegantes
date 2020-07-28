@@ -55,6 +55,10 @@ app.get("/tacto", (req,res)=>{
 app.get("/tacto-reflexion", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/tacto"});
 });
+
+app.get("/tacto-recompensas", (req,res)=>{
+    res.sendFile("recompensas.html", {root:"public/sentidos/tacto"});
+});
 // -------------------------------------------
 
 // Rutas Sentido Olfato------------------------------
