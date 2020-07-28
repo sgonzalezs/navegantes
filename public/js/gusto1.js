@@ -14,7 +14,7 @@ function answerGusto(identity){
             let data={
                 id:identity._id,
                 question,
-                answer,
+                answer:answer,
                 sense:'gusto',
                 activity:'seleccion'
             }

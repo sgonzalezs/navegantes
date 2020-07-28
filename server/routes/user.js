@@ -1,6 +1,6 @@
 const express=require('express');
 const User=require("../models/user.js");
-const Question=require("../models/questions.js");
+const Quest=require("../models/questions.js");
 
 //token config
 const jwt=require("jsonwebtoken");
@@ -49,6 +49,10 @@ app.get("/vista-recompensas", (req,res)=>{
 
 // Rutas Sentido Tacto
 app.get("/tacto", (req,res)=>{
+    res.sendFile("tacto.html", {root:"public/sentidos/tacto"});
+});
+
+app.get("/tacto-reflexion", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/tacto"});
 });
 // -------------------------------------------
@@ -87,14 +91,14 @@ app.get("/ajuste", (req,res)=>{
 
 app.post("/respuesta", (req,res)=>{
     let body=req.body;
-    let question=new Question({
-        user_id:body.id,
+    let question=new Quest({
+        user:body.id,
         question:body.question,
         sense:body.sense,
-        answer:body.answer,
+        value:body.answer,
         activity:body.activity
     })
-
+    
     question.save((err,answerStored)=>{
         if(err){
             return res.status(400).json({

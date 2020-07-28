@@ -1,0 +1,22 @@
+
+.btnSendTacto{
+    padding:15px;
+    background: #7136a1;
+    color:white;
+    border:0px;
+    border-radius: 5px;
+    width: 150px;
+    font-weight: bold;
+    margin:20px;
+}
+
+.contentTacto{
+    background: #ffffff;
+    padding:10px;
+}
+
+.contentTacto img{
+    width: 55%;
+    right:20%;
+    margin-left:20%;
+}

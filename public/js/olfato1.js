@@ -14,7 +14,7 @@ function answerOlfato(identity){
             let data={
                 id:identity._id,
                 question,
-                answer,
+                answer:answer,
                 sense:'olfato',
                 activity:'seleccion'
             }

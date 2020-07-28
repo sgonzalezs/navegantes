@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Recompensas</title>
+    <title>Sentido del tacto</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script>
         if(!localStorage.getItem('token')){
@@ -19,6 +19,7 @@
     <!-- <link rel='stylesheet' type='text/css' href='./css/style.css'> -->
     <link rel='stylesheet' type='text/css' href='../../css/avatar-style.css'>
     <link rel='stylesheet' type='text/css' href='../../css/escucha-style.css'>
+    <link rel='stylesheet' type='text/css' href='../../css/tacto-style.css'>
 </head>
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg navAvatar">
@@ -37,21 +38,29 @@
         </div>
     </nav>
     <section class="container-fluid">
-        <div class="avatarLoaded">
-            <img src="" alt="Pirata Seleccionado">
-        </div>
-        <div class="trophyEscucha">
-            <img src="../../images/sentidos/gusto/premios/parche.png">
-        </div>
         <section class="row content">
-            <div class="col-sm-4 offset-sm-8">
-                <h2 class="text-white title">GUSTO</h2>
-                <p id="success">
-                    Felicidades, has alcanzado un nuevo nivel de exploración.
+            <div class="col-sm-8 contentTacto">
+                <img src="../../images/sentidos/tacto/tipos/abuelito.jpg">
+            </div>  
+            <div class="col-sm-4">
+                <h2 class="text-white title">TACTO</h2>
+                <!-- <p class="subTitle">
+                    Mira el video, conoce más sobre el sentido del tacto y responde: 
+                </p> -->
+                <p id="questionTacto">
+                    Si te encuentras a estas personas en la calle, ¿cómo los saludas?
                 </p>
+                <div class="row mt-5">
+                    <button type="button" class="btnSendTacto" value="Dar la mano">Dar la mano</button>
+                    <button type="button" class="btnSendTacto" value="Abrazar">Abrazar</button>
+                    <button type="button" class="btnSendTacto" value="Beso en mejilla">Beso en mejilla</button>
+                    <button type="button" class="btnSendTacto" value="Puñito">Puñito</button>
+                    <div class="alert alert-primary mt-2 alert" role="alert" style="display:none;">
+                </div>
+                </div>
                 <a href="/sentido">
-                    <button type="button" class=" btnReflexion">Siguiente</button>
-                </a>
+                    <button class="btnContinue" type="button" style="display: none;">Continuar</button>      
+                </a> 
             </div>
         </section>
     </section>
@@ -68,6 +77,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
         crossorigin="anonymous">
     </script>
-    <script src="../../js/getAvatar.js"></script>
+<script src="../../js/tacto1.js"></script>
+<script src="../../js/getAvatar.js"></script>
 </body>
 </html>
