@@ -88,6 +88,11 @@ app.get("/gusto-recompensas", (req,res)=>{
     res.sendFile("recompensas.html", {root:"public/sentidos/gusto"});
 });
 
+// Sentidos
+app.get("/sentidos-reflexion", (req,res)=>{
+    res.sendFile("reflexion.html", {root:"public/"});
+});
+
 // Configuracion
 app.get("/ajuste", (req,res)=>{
     res.sendFile("ajuste.html", {root:"public/"});

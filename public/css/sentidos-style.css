@@ -31,3 +31,71 @@ body{
 .contentSentidosImg img:hover{
     transform:scale(1.02,1.02);
 }
+
+.btnContinue{
+    background-image: url('../images/avatar/Fondo.png');
+    background-size: cover;
+    padding:5px;
+    width:150px;
+    margin:auto;
+    font-family: 'Bungee', cursive;
+    color:#ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 20%;
+    margin-top:10px;
+    box-shadow: 8px 9px 17px -4px rgba(0,0,0,0.75);
+}
+
+.btnContinue:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+}
+
+/* Estilo reflexion */
+.videoLoad{
+    width: 100%;
+    height: auto;
+}
+
+.content{
+    margin:2%;
+}
+
+.title{
+    font-family: 'Bungee', cursive;
+}
+
+.subTitle{
+    font-family: 'Leckerli One', cursive;
+    color:#ffff4d;
+    font-size:23px;
+}
+
+.btnContinue{
+    background-image: url('../images/avatar/Fondo.png');
+    background-size: cover;
+    padding:5px;
+    width:150px;
+    margin:auto;
+    font-family: 'Bungee', cursive;
+    color:#ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 20%;
+    margin-top:10px;
+    box-shadow: 8px 9px 17px -4px rgba(0,0,0,0.75);
+}
+
+.btnContinue:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+}
+
+p.reflexion{
+    font-style: italic;
+    font-size: 18px;
+}
+

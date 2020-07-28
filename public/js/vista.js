@@ -41,7 +41,8 @@ $(document).ready(function(){
                         {
                             user_id:identity._id, 
                             sense:"vista", 
-                            activity_1:true
+                            activity_1:true,
+                            activity_2:true
                         }));
                   }
               })
