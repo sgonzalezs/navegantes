@@ -27,7 +27,13 @@ $(document).ready(function(){
 				localStorage.setItem('token', response.token);
 				localStorage.setItem('user', response.user.email);
 				localStorage.setItem('identity', JSON.stringify(response.user));
-				window.location.replace('/avatar');
+				if(response.message=="login"){
+					let identity=JSON.parse(localStorage.getItem('identity'))
+					localStorage.setItem('userAvatar', identity.image);
+					window.location.replace('/sentido');
+				}else{
+					window.location.replace('/avatar');	
+				}
 			}
 		})
 		.catch(function(err){

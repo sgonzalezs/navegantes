@@ -121,7 +121,7 @@ body{
     font-size: 15px;
 }
 
-.btnAvatar{
+.btnAvatar, .btnContinue{
     font-family: 'Bungee', cursive;
     background-image: url('../images/fondo/Fondo.png');
     background-size: cover;
@@ -136,7 +136,7 @@ body{
     margin-top: 5%;
 }
 
-.btnAvatar:focus{
+.btnAvatar:focus, .btnContinue:focus{
     outline:none !important;
     outline-width: 0 !important;
 }

@@ -140,6 +140,7 @@ app.post("/registro", (req,res)=>{
             }, 'SECREET-SEED-999',{expiresIn:60*60*24*30});
             return res.status(200).json({
                 ok:true,
+                message:"login",
                 user:currentUser,
                 token
             });
@@ -160,7 +161,8 @@ app.post("/registro", (req,res)=>{
 					user:newUser
 				}, 'SECREET-SEED-999',{expiresIn:60*60*24*30});
 				return res.status(200).json({
-					ok:true,
+                    ok:true,
+                    message:"created",
 					user:newUser,
 					token
 				});
