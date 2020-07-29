@@ -1,6 +1,7 @@
 const express=require('express');
 const User=require("../models/user.js");
 const Quest=require("../models/questions.js");
+const Inspiring=require("../models/inspiring.js");
 
 //token config
 const jwt=require("jsonwebtoken");
@@ -105,6 +106,70 @@ app.get("/inspiraciones", (req,res)=>{
 
 app.get("/catalina-arroyave", (req,res)=>{
     res.sendFile("catalina.html", {root:"public/inspiracion"});
+});
+
+app.get("/votos/:user", (req,res)=>{
+    let user=req.params.user;
+    Inspiring.findOne({name:user}, (err, dataFounded)=>{
+        if(err){
+            return res.status(400).json({
+                ok:false,
+                message:err
+            });
+        }
+
+        if(dataFounded){
+            return res.status(200).json({
+                ok:true,
+                data:dataFounded
+            });
+        }
+    });
+});
+
+app.post("/votacion", (req,res)=>{
+    let body=req.body;
+
+    Inspiring.findOne({name:body.name}, (err, dataFounded)=>{
+        if(err){
+            return res.status(400).json({
+                ok:false,
+                message:err
+            });
+        }
+
+        if(dataFounded){
+            var changes={};
+            let value=parseInt(dataFounded.like+1);
+            if(body.option=="like"){
+                changes={
+                    like:value
+                };
+            }else{
+                changes={
+                    dislike:value
+                };
+            }
+
+            Inspiring.findOneAndUpdate({name:body.name},changes, (err, dataUpdated)=>{
+                if(err){
+                    return res.status(400).json({
+                        ok:false,
+                        message:err
+                    });
+                }
+                return res.status(200).json({
+                    ok:true,
+                    data:changes
+                });
+            });
+        }else{
+            return res.status(404).json({
+                ok:false,
+                message:"Datos no encontrados"
+            });
+        }
+    });
 });
 
 app.post("/respuesta", (req,res)=>{

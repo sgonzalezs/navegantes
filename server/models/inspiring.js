@@ -13,14 +13,6 @@ let inspiringSchema=new Schema({
     dislike:{
         type:Number,
         required:true
-    },
-    value:{
-        type:String,
-        required:[true, "Debes ingresar una respuesta"]
-    },
-    activity:{
-        type:String,
-        required:[true, "Debes ingresar una respuesta"]
     }
 });
 
