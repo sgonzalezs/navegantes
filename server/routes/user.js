@@ -98,6 +98,15 @@ app.get("/ajuste", (req,res)=>{
     res.sendFile("ajuste.html", {root:"public/"});
 });
 
+// Inspiracion
+app.get("/inspiraciones", (req,res)=>{
+    res.sendFile("inspiracion.html", {root:"public"});
+});
+
+app.get("/catalina-arroyave", (req,res)=>{
+    res.sendFile("catalina.html", {root:"public/inspiracion"});
+});
+
 app.post("/respuesta", (req,res)=>{
     let body=req.body;
     let question=new Quest({

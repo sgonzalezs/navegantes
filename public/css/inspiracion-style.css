@@ -1,0 +1,80 @@
+body{
+    background-image: url('../images/avatar/fondo_2.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-size: 100% 100vh;
+}
+
+@media only screen and (max-width: 1080px) {
+    body {
+        background-size: 100% 150%;
+    }
+}
+
+.content{
+    margin:2%;
+}
+
+.imagesSection img{
+    width: 25%;
+    float: right;
+    transition: transform 0.1s;
+}
+
+.imagesSection img:hover{
+    transform: scale(1.02,1.02);
+}
+
+.title{
+    font-family: 'Bungee', cursive;
+    font-size: 23px;
+}
+
+.subTitle{
+    font-family: 'Leckerli One', cursive;
+    color:#ffff4d;
+    font-size:23px;
+}
+
+p.resume{
+    font-style: italic;
+}
+
+.btnContinue{
+    background-image: url('../images/avatar/Fondo.png');
+    background-size: cover;
+    padding:5px;
+    width:150px;
+    margin:auto;
+    font-family: 'Bungee', cursive;
+    color:#ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 20%;
+    margin-top:10px;
+    box-shadow: 8px 9px 17px -4px rgba(0,0,0,0.75);
+}
+
+.btnContinue:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+}
+
+/* Estilo inspiradores */
+.videoLoad{
+    width: 100%;
+    height: auto;
+}
+
+.btnQual{
+    padding:15px;
+    background: #7136a1;
+    color:white;
+    border:0px;
+    border-radius: 5px;
+    width: 150px;
+    font-weight: bold;
+    margin:5px 20px;
+}
+

@@ -8,5 +8,4 @@ $(document).ready(function(){
     }else{
         video.src="../media/sentidos/Bachillerato.mp4";
     }
-
 });
