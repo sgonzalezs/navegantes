@@ -108,6 +108,35 @@ app.get("/catalina-arroyave", (req,res)=>{
     res.sendFile("catalina.html", {root:"public/inspiracion"});
 });
 
+app.get("/maria-camila-trillos", (req,res)=>{
+    res.sendFile("mcamila.html", {root:"public/inspiracion"});
+});
+
+app.get("/boyka", (req,res)=>{
+    res.sendFile("boyka.html", {root:"public/inspiracion"});
+});
+
+app.get("/juan-pablo-valencia", (req,res)=>{
+    res.sendFile("jpablo.html", {root:"public/inspiracion"});
+});
+
+app.get("/jke", (req,res)=>{
+    res.sendFile("jke.html", {root:"public/inspiracion"});
+});
+
+app.get("/brigitte-baptiste", (req,res)=>{
+    res.sendFile("brigette.html", {root:"public/inspiracion"});
+});
+
+app.get("/arex", (req,res)=>{
+    res.sendFile("arex.html", {root:"public/inspiracion"});
+});
+
+app.get("/melissa-toro", (req,res)=>{
+    res.sendFile("mtoro.html", {root:"public/inspiracion"});
+});
+
+
 app.get("/votos/:user", (req,res)=>{
     let user=req.params.user;
     Inspiring.findOne({name:user}, (err, dataFounded)=>{

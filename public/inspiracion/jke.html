@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JKE</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        if(!localStorage.getItem('token')){
+            window.location="/";
+        }
+    </script>
+    <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='./css/style.css'>
+    <link rel='stylesheet' type='text/css' href='./css/avatar-style.css'>
+    <link rel='stylesheet' type='text/css' href='./css/inspiracion-style.css'>
+</head>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg navAvatar">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="/sentido"><p>INICIO</p> </a>
+              <a class="nav-item nav-link active currentNav" href="#"><p>RETA A UN AMIGO</p></a>
+              <a class="nav-item nav-link active" href="#"><p>EVENTOS</p></a>
+            </div>
+        </div>
+        <div class="avatarSelected">
+            <img src="" width="80px">
+        </div>
+    </nav>
+    <section class="container-fluid">
+        <section class="row content">
+            <div class="col-sm-8">
+                <video class="videoLoad" id="videoLoad" autoplay controls>
+                    <source src="" type="video/mp4">
+                    Este navegador no es compatible con la reproducción de vídeos.
+                </video>
+            </div>  
+            <div class="col-sm-4">
+                <h2 class="text-white title">JKE</h2>
+                <p class="subTitle">
+                    Inspirador mundo del arte
+                </p>
+                <p class="resume">
+                    Te presentamos al Jke de Crew Peligrosos, un artista y gestor que ha puesto a conversar a   
+                    Aranjuez con el mundo entero través del hip-hop.
+                </p>
+                <div class="row mt-5 groupButtons">
+                    <div>
+                        <button type="button" value="Jke-like" class="btnQual btnLike">
+                            Me gusta
+                        </button>
+                        <p class="votes like"></p>
+                    </div>
+                    <div>
+                        <button type="button" value="Jke-dislike" class="btnQual btnDislike">
+                            No me gusta
+                        </button>
+                        <p class="votes dislike"></p>
+                    </div>  
+                </div>
+                <div class="alert alert-primary mt-2" role="alert" style="display:none;">
+                    
+                </div>
+                <a href="/inspiraciones">
+                    <button class="btnContinue" type="button" style="display: none;">Continuar</button>      
+                </a> 
+            </div>
+        </section>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+        crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
+        crossorigin="anonymous">
+    </script>
+
+    <script src="../js/getAvatar.js"></script>
+    <script src="../js/inspiradores/jke.js"></script>
+    <script src="../js/inspiradores/likes.js"></script>
+</body>
+</html>
