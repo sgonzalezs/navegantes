@@ -3,7 +3,7 @@ const Inspiring=require("../models/inspiring.js");
 const Vote=require("../models/vote.js");
 const app=express();
 
-app.get("/inspiracioncomfama/votos/:user", (req,res)=>{
+app.get("/votos/:user", (req,res)=>{
     let user=req.params.user;
     Vote.find({inspiring:user}, (err, dataFounded)=>{
         if(err){
@@ -22,7 +22,7 @@ app.get("/inspiracioncomfama/votos/:user", (req,res)=>{
     });
 });
 
-app.get("/inspiracioncomfama/validate-votes/:user", (req,res)=>{
+app.get("/validate-votes/:user", (req,res)=>{
     let user=req.params.user;
     Vote.find({user}, (err, dataFounded)=>{
         if(err){
@@ -41,7 +41,7 @@ app.get("/inspiracioncomfama/validate-votes/:user", (req,res)=>{
     });
 });
 
-app.post("/inspiracioncomfama/vote", (req,res)=>{
+app.post("/vote", (req,res)=>{
     let body=req.body;
     let like=false;
     let dislike=false;
@@ -94,7 +94,7 @@ app.post("/inspiracioncomfama/vote", (req,res)=>{
     
 });
 
-app.get("/inspiracioncomfama/validate-like/:user&:inspiring", (req,res)=>{
+app.get("/validate-like/:user&:inspiring", (req,res)=>{
     let user=req.params.user;
     let inspiring=req.params.inspiring;
 

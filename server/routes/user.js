@@ -15,168 +15,168 @@ app.get("/inspiracioncomfama", (req,res)=>{
     res.sendFile("index.html", {root: 'public/'});
 });
 
-app.get("/inspiracioncomfama/avatar", (req,res)=>{
+app.get("/avatar", (req,res)=>{
     res.sendFile("avatar.html", {root: 'public/'});
 });
 
-app.get("/inspiracioncomfama/sentido", (req,res)=>{
+app.get("/sentido", (req,res)=>{
     res.sendFile("sentidos.html", {root: 'public/'});
 });
 
 // Rutas Sentido Escucha
-app.get("/inspiracioncomfama/escucha", (req,res)=>{
+app.get("/escucha", (req,res)=>{
     res.sendFile("musica.html", {root:"public/sentidos/escucha"});
 });
-app.get("/inspiracioncomfama/escucha-reflexion", (req,res)=>{
+app.get("/escucha-reflexion", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/escucha"});
 });
 
-app.get("/inspiracioncomfama/escucha-recompensas", (req,res)=>{
+app.get("/escucha-recompensas", (req,res)=>{
     res.sendFile("recompensas.html", {root:"public/sentidos/escucha"});
 });
 
 // ----------------------------------------
 
 //Rutas Sentido Vista
-app.get("/inspiracioncomfama/vista", (req,res)=>{
+app.get("/vista", (req,res)=>{
     res.sendFile("vista.html", {root:"public/sentidos/vista"});
 });
 
-app.get("/inspiracioncomfama/vista-reflexion", (req,res)=>{
+app.get("/vista-reflexion", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/vista"});
 });
 
-app.get("/inspiracioncomfama/vista-recompensas", (req,res)=>{
+app.get("/vista-recompensas", (req,res)=>{
     res.sendFile("recompensas.html", {root:"public/sentidos/vista"});
 });
 // ----------------------------------------
 
 // Rutas Sentido Tacto
-app.get("/inspiracioncomfama/tacto", (req,res)=>{
+app.get("/tacto", (req,res)=>{
     res.sendFile("tacto.html", {root:"public/sentidos/tacto"});
 });
 
-app.get("/inspiracioncomfama/tacto-reflexion", (req,res)=>{
+app.get("/tacto-reflexion", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/tacto"});
 });
 
-app.get("/inspiracioncomfama/tacto-recompensas", (req,res)=>{
+app.get("/tacto-recompensas", (req,res)=>{
     res.sendFile("recompensas.html", {root:"public/sentidos/tacto"});
 });
 // -------------------------------------------
 
 // Rutas Sentido Olfato
-app.get("/inspiracioncomfama/olfato", (req,res)=>{
+app.get("/olfato", (req,res)=>{
     res.sendFile("olfato.html", {root:"public/sentidos/olfato"});
 });
 
-app.get("/inspiracioncomfama/olfato-reflexion", (req,res)=>{
+app.get("/olfato-reflexion", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/olfato"});
 });
 
-app.get("/inspiracioncomfama/olfato-recompensas", (req,res)=>{
+app.get("/olfato-recompensas", (req,res)=>{
     res.sendFile("recompensas.html", {root:"public/sentidos/olfato"});
 });
 // --------------------------------------------------
 
 // Ruras Sentido Gusto
-app.get("/inspiracioncomfama/gusto", (req,res)=>{
+app.get("/gusto", (req,res)=>{
     res.sendFile("gusto.html", {root:"public/sentidos/gusto"});
 });
 
-app.get("/inspiracioncomfama/gusto-reflexion", (req,res)=>{
+app.get("/gusto-reflexion", (req,res)=>{
     res.sendFile("index.html", {root:"public/sentidos/gusto"});
 });
 
-app.get("/inspiracioncomfama/gusto-recompensas", (req,res)=>{
+app.get("/gusto-recompensas", (req,res)=>{
     res.sendFile("recompensas.html", {root:"public/sentidos/gusto"});
 });
 
 // Sentidos
-app.get("/inspiracioncomfama/sentidos-reflexion", (req,res)=>{
+app.get("/sentidos-reflexion", (req,res)=>{
     res.sendFile("reflexion.html", {root:"public/"});
 });
 
 // Inspiracion
-app.get("/inspiracioncomfama/inspiraciones", (req,res)=>{
+app.get("/inspiraciones", (req,res)=>{
     res.sendFile("inspiracion.html", {root:"public"});
 });
 
-app.get("/inspiracioncomfama/catalina-arroyave", (req,res)=>{
+app.get("/catalina-arroyave", (req,res)=>{
     res.sendFile("catalina.html", {root:"public/inspiracion"});
 });
 
-app.get("/inspiracioncomfama/maria-camila-trillos", (req,res)=>{
+app.get("/maria-camila-trillos", (req,res)=>{
     res.sendFile("mcamila.html", {root:"public/inspiracion"});
 });
 
-app.get("/inspiracioncomfama/boyka", (req,res)=>{
+app.get("/boyka", (req,res)=>{
     res.sendFile("boyka.html", {root:"public/inspiracion"});
 });
 
-app.get("/inspiracioncomfama/juan-pablo-valencia", (req,res)=>{
+app.get("/juan-pablo-valencia", (req,res)=>{
     res.sendFile("jpablo.html", {root:"public/inspiracion"});
 });
 
-app.get("/inspiracioncomfama/jke", (req,res)=>{
+app.get("/jke", (req,res)=>{
     res.sendFile("jke.html", {root:"public/inspiracion"});
 });
 
-app.get("/inspiracioncomfama/brigitte-baptiste", (req,res)=>{
+app.get("/brigitte-baptiste", (req,res)=>{
     res.sendFile("brigette.html", {root:"public/inspiracion"});
 });
 
-app.get("/inspiracioncomfama/arex", (req,res)=>{
+app.get("/arex", (req,res)=>{
     res.sendFile("arex.html", {root:"public/inspiracion"});
 });
 
-app.get("/inspiracioncomfama/melissa-toro", (req,res)=>{
+app.get("/melissa-toro", (req,res)=>{
     res.sendFile("mtoro.html", {root:"public/inspiracion"});
 });
 
-app.get("/inspiracioncomfama/inspiracion-reflexion", (req,res)=>{
+app.get("/inspiracion-reflexion", (req,res)=>{
     res.sendFile("reflexion.html", {root:"public/inspiracion"});
 });
 
-app.get("/inspiracioncomfama/inspiracion-recompensas", (req,res)=>{
+app.get("/inspiracion-recompensas", (req,res)=>{
     res.sendFile("recompensas.html", {root:"public/inspiracion"});
 });
 
 // Recorridos
-app.get("/inspiracioncomfama/recorrido", (req,res)=>{
+app.get("/recorrido", (req,res)=>{
     res.sendFile("recorridos.html", {root:"public/recorridos"});
 });
 
-app.get("/inspiracioncomfama/encuentro", (req,res)=>{
+app.get("/encuentro", (req,res)=>{
     res.sendFile("centro.html", {root:"public/recorridos"});
 });
 
-app.get("/inspiracioncomfama/conocimiento", (req,res)=>{
+app.get("/conocimiento", (req,res)=>{
     res.sendFile("conocimiento.html", {root:"public/recorridos"});
 });
 
-app.get("/inspiracioncomfama/apropiacion", (req,res)=>{
+app.get("/apropiacion", (req,res)=>{
     res.sendFile("apropiacion.html", {root:"public/recorridos"});
 });
 
-app.get("/inspiracioncomfama/recorridos-reflexion", (req,res)=>{
+app.get("/recorridos-reflexion", (req,res)=>{
     res.sendFile("reflexion.html", {root:"public/recorridos"});
 });
 
-app.get("/inspiracioncomfama/recorridos-recompensas", (req,res)=>{
+app.get("/recorridos-recompensas", (req,res)=>{
     res.sendFile("recompensas.html", {root:"public/recorridos"});
 });
 
 // CIERRE
-app.get("/inspiracioncomfama/premiacion", (req,res)=>{
+app.get("/premiacion", (req,res)=>{
     res.sendFile("cierre.html", {root:"public/"});
 });
 
-app.get("/inspiracioncomfama/viaje", (req,res)=>{
+app.get("/viaje", (req,res)=>{
     res.sendFile("mapa.html", {root:"public/"});
 });
 
-app.get("/inspiracioncomfama/senses/:user&:answer&:question", (req,res)=>{
+app.get("/senses/:user&:answer&:question", (req,res)=>{
     let user=req.params.user;
     let answer=req.params.answer;
     let question=req.params.question;
@@ -203,7 +203,7 @@ app.get("/inspiracioncomfama/senses/:user&:answer&:question", (req,res)=>{
     });
 });
 
-app.get("/inspiracioncomfama/datos/:sense&:activity", (req,res)=>{
+app.get("/datos/:sense&:activity", (req,res)=>{
     let sense=req.params.sense;
     let activity=req.params.activity;
     Quest.find({sense, activity}, (err, data)=>{
@@ -226,7 +226,7 @@ app.get("/inspiracioncomfama/datos/:sense&:activity", (req,res)=>{
     });
 });
 
-app.get("/inspiracioncomfama/student/:user", (req,res)=>{
+app.get("/student/:user", (req,res)=>{
     let user=req.params.user;
 
     Student.findOne({document:user}, (err, data)=>{
@@ -243,7 +243,7 @@ app.get("/inspiracioncomfama/student/:user", (req,res)=>{
     })
 })
 
-app.post("/inspiracioncomfama/respuesta", (req,res)=>{
+app.post("/respuesta", (req,res)=>{
     let body=req.body;
     let question=new Quest({
         user:body.id,
@@ -283,7 +283,7 @@ app.post("/inspiracioncomfama/respuesta", (req,res)=>{
     });
 });
 
-app.post("/inspiracioncomfama/login", (req,res)=>{
+app.post("/login", (req,res)=>{
     let body=req.body;
 
     if(body.document=="00000000" && body.email=="admin@admin.admin"){
@@ -335,7 +335,7 @@ app.post("/inspiracioncomfama/login", (req,res)=>{
     });
 });
 
-app.post("/inspiracioncomfama/registro", (req,res)=>{
+app.post("/registro", (req,res)=>{
     let body=req.body;
 
     Student.findOne({document:body.document}, (failed, studentData)=>{
@@ -409,7 +409,7 @@ app.post("/inspiracioncomfama/registro", (req,res)=>{
     
 });
 
-app.put("/inspiracioncomfama/avatar", (req,res)=>{
+app.put("/avatar", (req,res)=>{
     let body=req.body;
     
     User.findOneAndUpdate({email:body.email},{image:body.image}, (err, userUpdated)=>{

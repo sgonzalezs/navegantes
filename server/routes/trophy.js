@@ -2,7 +2,7 @@ const express=require("express");
 const app=express();
 const Tropy=require("../models/trophy.js");
 
-app.get("/inspiracioncomfama/premios/:user", (req,res)=>{
+app.get("/premios/:user", (req,res)=>{
 
     let user=req.params.user;
 
@@ -28,7 +28,7 @@ app.get("/inspiracioncomfama/premios/:user", (req,res)=>{
     });
 });
 
-app.put("/inspiracioncomfama/puntaje", (req,res)=>{
+app.put("/puntaje", (req,res)=>{
     let body=req.body;
     let update={
         point:body.points
@@ -55,7 +55,7 @@ app.put("/inspiracioncomfama/puntaje", (req,res)=>{
     });
 });
 
-app.post("/inspiracioncomfama/premio", (req,res)=>{
+app.post("/premio", (req,res)=>{
     let body=req.body;
 
     Tropy.findOne({user:body.user, trophy:body.trophy}, (err, trophyStored)=>{

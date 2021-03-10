@@ -9,15 +9,15 @@ const Quest=require("../models/questions.js");
 const app=express();
 app.use(fileUpload());
 
-app.get("/inspiracioncomfama/administracion", (req,res)=>{
+app.get("/administracion", (req,res)=>{
     res.sendFile("admin.html", {root:"public"});
 });
 
-app.get("/inspiracioncomfama/administracion-registro", (req,res)=>{
+app.get("/administracion-registro", (req,res)=>{
     res.sendFile("admin-reg.html", {root:"public"});
 });
 
-app.get("/inspiracioncomfama/school/:doc", (req,res)=>{
+app.get("/school/:doc", (req,res)=>{
     let doc=req.params.doc;
     Student.findOne({document:doc},(errno, dataJoin)=>{
         if(errno){
@@ -34,7 +34,7 @@ app.get("/inspiracioncomfama/school/:doc", (req,res)=>{
     });
 })
 
-app.get("/inspiracioncomfama/students", (req,res)=>{
+app.get("/students", (req,res)=>{
     // let doc=req.params.doc;
     Student.find((errno, data)=>{
         if(errno){
@@ -50,7 +50,7 @@ app.get("/inspiracioncomfama/students", (req,res)=>{
     });
 });
 
-app.get("/inspiracioncomfama/usuarios", (req,res)=>{
+app.get("/usuarios", (req,res)=>{
     User.find((err, data)=>{
         if(err){
             return res.status(400).json({
@@ -65,7 +65,7 @@ app.get("/inspiracioncomfama/usuarios", (req,res)=>{
     });
 });
 
-app.get("/inspiracioncomfama/quest", (req,res)=>{
+app.get("/quest", (req,res)=>{
     Quest.find((err, data)=>{
         if(err){
             return res.status(400).json({
@@ -81,7 +81,7 @@ app.get("/inspiracioncomfama/quest", (req,res)=>{
     });
 });
 
-app.get("/inspiracioncomfama/usuario/:user", (req,res)=>{
+app.get("/usuario/:user", (req,res)=>{
     let user=req.params.user;
 
     Quest.find({user}, (err, data)=>{
@@ -107,7 +107,7 @@ app.get("/inspiracioncomfama/usuario/:user", (req,res)=>{
     });
 });
 
-app.post("/inspiracioncomfama/student", (req,res)=>{
+app.post("/student", (req,res)=>{
     let body=req.body;
 
     let student=new Student({
@@ -133,7 +133,7 @@ app.post("/inspiracioncomfama/student", (req,res)=>{
     });
 });
 
-app.get("/inspiracioncomfama/student/:doc", (req,res)=>{
+app.get("/student/:doc", (req,res)=>{
     let document=req.params.doc;
 
     Student.findOne({document}, (err, data)=>{
@@ -151,7 +151,7 @@ app.get("/inspiracioncomfama/student/:doc", (req,res)=>{
     });
 });
 
-app.post('/inspiracioncomfama/upload', function(req, res) {
+app.post('/upload', function(req, res) {
     // console.log(req.files.fileInput);
     let file=req.files.fileInput;
     let name=file.name;
@@ -162,7 +162,7 @@ app.post('/inspiracioncomfama/upload', function(req, res) {
                 message: err
             });
         }
-        return res.redirect("/inspiracioncomfama/administracion-registro");
+        return res.redirect("/administracion-registro");
     });
 });
 

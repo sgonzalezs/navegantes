@@ -4,7 +4,7 @@ const Quest=require("../models/questions.js");
 
 const app=express();
 
-app.get("/inspiracioncomfama/seleccion/:user&:sense&:activity", (req,res)=>{
+app.get("/seleccion/:user&:sense&:activity", (req,res)=>{
     let user=req.params.user;
     let sense=req.params.sense;
     let activity=req.params.activity;
@@ -57,7 +57,7 @@ app.get("/inspiracioncomfama/seleccion/:user&:sense&:activity", (req,res)=>{
     
 });
 
-app.get("/inspiracioncomfama/validate/:user&:answer&:activity", (req,res)=>{
+app.get("/validate/:user&:answer&:activity", (req,res)=>{
     let user=req.params.user;
     let answer=req.params.answer;
     let activity=req.params.activity;
@@ -84,7 +84,7 @@ app.get("/inspiracioncomfama/validate/:user&:answer&:activity", (req,res)=>{
     });
 });
 
-app.get("/inspiracioncomfama/recorridos-validacion/:user&:activity", (req,res)=>{
+app.get("/recorridos-validacion/:user&:activity", (req,res)=>{
     let user=req.params.user;
     let activity=req.params.activity;
 
