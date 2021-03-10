@@ -79,9 +79,24 @@ body{
     border-right: 2px solid white;
 }
 
+.currentNav img{
+    margin:15px 0px 0px 20px;
+    position: absolute;
+    z-index: 1;
+}
+
 .currentNav p{
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-right: 80px;
+    padding-left: 85px;
+    padding-top: 10px;
+    font-size: 25px;
+}
+
+/* footer copyright */
+.footer img{
+    right: 0;
+    bottom: 0;
+    float: right;
 }
 
 /* ---------------------------------------------------------- */
@@ -128,7 +143,7 @@ body{
     background-repeat:no-repeat;
     text-align: center;
     text-decoration: none;
-    font-size: 23px;
+    font-size: 20px;
     box-shadow: 8px 9px 17px -4px rgba(0,0,0,0.75);
     padding:5px 10px;
     color:#ffffff;
@@ -139,4 +154,15 @@ body{
 .btnAvatar:focus, .btnContinue:focus{
     outline:none !important;
     outline-width: 0 !important;
+}
+
+.footer img{
+    position: absolute;
+    width: 220px;
+}
+
+@media only screen and (max-width:960px){
+    .footer img{
+        position: relative;
+    }
 }

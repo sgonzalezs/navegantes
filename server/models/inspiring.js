@@ -7,12 +7,9 @@ let inspiringSchema=new Schema({
         required:true,
         type:String
     },
-    like:{
-        type:Number,
-    },
-    dislike:{
-        type:Number,
-        required:true
+    category:{
+        type:String,
+        require:true
     }
 });
 

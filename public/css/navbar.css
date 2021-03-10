@@ -1,15 +1,15 @@
 .navAvatar{
-    background-image: url('../images/avatar/navbar.png');
+    background-image: url('../images/avatar/navbar_l.png');
     background-size: cover;
     background-repeat:no-repeat;
-    opacity: 0.9;
+    opacity: 1;
     font-family: 'Bungee', cursive;
     font-size: 20px;
     color: #ffffff;
     position: relative;
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1080px){
     .navAvatar{
         background-image: url('../images/avatar/Fondo.png');
     }
@@ -32,7 +32,7 @@
 }
 
 #navbarNavAltMarkup{
-    margin-left:23%;
+    margin-left:25%;
 }
 
 .navAvatar p{
@@ -53,13 +53,22 @@
     height: auto;
 }
 
+
 .currentNav{
     margin:0 60px 0 60px;
     border-left: 2px solid white;
     border-right: 2px solid white;
 }
 
+.currentNav img{
+    margin:15px 0px 0px 20px;
+    position: absolute;
+    z-index: 1;
+}
+
 .currentNav p{
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-right: 80px;
+    padding-left: 85px;
+    padding-top: 10px;
+    font-size: 25px;
 }

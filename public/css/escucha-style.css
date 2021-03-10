@@ -1,23 +1,34 @@
 body{
-    background-image: url('../images/avatar/fondo_2.png');
+    background-image: url('../images/fondo/Fondo2-sentidos.png');
     background-size: cover;
     background-repeat:no-repeat;
-    background-size: 100% 1000px;
+    /* background-size: 100% 110%; */
+    background-size: 100% 100vh;
 }
 
-/* @media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 800px) {
     body {
-        background-size: 100% 150%;
+        background-size: 100% 100%;
     }
-} */
+}
+
+@media only screen and (max-width: 960px) {
+
+    body {
+        background-size: 100% 100%;
+    }
+
+    iframe{
+        height: 280px;
+    }
+}
 
 .videoLoad{
     width: 100%;
     height: auto;
 }
-
-.content{
-    margin:2%;
+.contentMusica{
+    margin:3%
 }
 
 .title{
@@ -55,7 +66,6 @@ body{
     background-size: cover;
     padding:5px;
     width:150px;
-    margin:auto;
     font-family: 'Bungee', cursive;
     color:#ffffff;
     text-align: center;
@@ -81,10 +91,10 @@ div.audio audio{
 
 #success{
     font-style: italic;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-.btnReflexion{
+.btnReflexion, .btnRecompensa{
     padding:15px;
     background: #7136a1;
     color:white;
@@ -94,22 +104,33 @@ div.audio audio{
     font-size:30px;
     margin-top: 10px;
 }
-.btnReflexion:focus{
+.btnReflexion:focus, .btnRecompensa:focus{
     background: #7136a1;
 }
 
-.avatarLoaded img{
+/* .avatarLoaded{
     position: absolute;
-    width: 33%;
+    width: 100%;
+    height: 120px;
     bottom: 0;
     left:0;
 }
+.avatarLoaded img{
+    bottom: 0;
+    left:0;
+    width: 50%;
+} */
 
-.trophyEscucha img{
+
+.footer img{
     position: absolute;
-    width: 25%;
-    left:35%;
-    margin-top:20px;
+    width: 220px;
+}
+
+@media only screen and (max-width: 960px) {
+    .footer img{
+        position: relative;
+    }
 }
 
 

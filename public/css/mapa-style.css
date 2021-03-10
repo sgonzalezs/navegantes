@@ -1,0 +1,148 @@
+body{
+    background-image: url('../images/avatar/fondo_2.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+}
+.mapa img{
+    width: 100%;
+}
+
+.inspiradoresIsla img{
+    position: absolute;
+    z-index: 1;
+    width: 250px;
+    bottom: 0px;
+    left:300px;
+}
+
+.sentidosIsla img{
+    position: absolute;
+    z-index: 1;
+    width: 220px;
+    bottom: 10px;
+    left:630px;
+}
+
+.recorridosIsla img{
+    position: absolute;
+    z-index: 1;
+    width: 120px;
+    bottom: 175px;
+    left:40px;
+    display: none;
+}
+
+.recorridosBase{
+    position: absolute;
+    z-index: 1;
+    width: 1100px;
+}
+
+.mapa a>img{
+    transition: transform 0.2s;
+}
+
+.mapa a>img:hover{
+    transform: scale(1.03,1.03);
+}
+
+
+@media only screen and (min-width: 1500px) {
+    .mapa img{
+        margin-left:0%;
+        width: 1220px;
+    }
+
+    .inspiradoresIsla img{
+        width: 355px;
+        bottom: 0px;
+        left:410px;
+    }
+    
+    .sentidosIsla img{
+        width: 315px;
+        bottom: 10px;
+        left:860px;
+    }
+    
+    .recorridosIsla img{
+        width: 165px;
+        top: 290px;
+        left:50px;
+    }
+}
+
+
+@media only screen and (max-width: 960px) {
+    .mapa img{
+        margin-left:0%;
+        width: 620px;
+    }
+
+    .inspiradoresIsla img{
+        width: 185px;
+        bottom: 0px;
+        left:210px;
+    }
+    
+    .sentidosIsla img{
+        width: 155px;
+        bottom: 10px;
+        left:470px;
+    }
+    
+    .recorridosIsla img{
+        width: 85px;
+        top: 148px;
+        left:33px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    body{
+        background-image: url('../images/avatar/fondo_2.png');
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-size: 100% 100vh;
+    }
+    .mapa img{
+        width: 400px;
+    }
+
+    .inspiradoresIsla img{
+        width: 120px;
+        bottom: 0px;
+        left:130px;
+    }
+    
+    .sentidosIsla img{
+        width: 100px;
+        bottom: 5px;
+        left:310px;
+    }
+    
+    .recorridosIsla img{
+        width: 60px;
+        top: 93px;
+        left:25px;
+    }
+}
+
+.footer img{
+    position: relative;
+    width: 220px;
+}
+
+div.device{
+    display: none;
+    padding: 20px;
+    margin: 50% 10%;
+    font-size: 20px;
+    width: 80%;
+}
+
+div.device img{
+    width:100%;
+}
+

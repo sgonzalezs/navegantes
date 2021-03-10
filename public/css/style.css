@@ -1,19 +1,62 @@
 body{
-    background-image: url('../images/fondo/FondoCompleto.png');
+    background-image: url('http://somosnavegantes.com/inspiracioncomfama/public/images/fondo/FondoCompleto.png');
     background-size: cover;
     background-repeat:no-repeat;
     background-size: 100% 100vh;
 }
 
-@media only screen and (max-width: 1080px) {
+.alertDevice{
+    display: none;
+}
+
+
+
+/* @media only screen and (max-width: 1080px) {
     body {
-        background-size: 100% 150%;
+        background-size: 100% 100vh;
     }
+    .alertDevice{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        background-size: 100% 100vh;
+    }
+    .alertDevice{
+        display: none;
+    }
+} */
+
+@media only screen and (max-width:600px) {
+    body {
+        background-image: url('http://somosnavegantes.com/inspiracioncomfama/public/images/fondo/Fondo.png');
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-size: 100% 100vh;
+    }
+
+    .alertDevice{
+        display: block;
+    }
+}
+
+div.device{
+    display: none;
+    padding: 20px;
+    margin: 50% 10%;
+    font-size: 50px;
+    width: 80%;
+}
+
+div.device img{
+    width:100%;
 }
 
 .formLogin{
     position: relative;
-    margin-top: 30%;
+    margin-top: 6%;
 }
 
 .formTitle{
@@ -23,41 +66,108 @@ body{
     padding: 10px 10px 0px 10px;
 }
 
+.subTitleLogin{
+    color:#fff;
+    margin-bottom:-10px;
+}
+
+.paragraphLogin{
+    font-size: 12px;
+    color:#fff;
+}
+
+.subTitleParent{
+    color:#fff;
+}
+
+.authParagraph{
+    font-style: italic;
+    font-size: 15px;
+}
+
+.modal-footer button{
+    border-radius: 0px;
+}
+
 .btnLogin{
-    width: 200px;
+    width: 150px;
     font-family: 'Bungee', cursive;
     color:#ffffff;
-    background-image: url('../images/fondo/Fondo.png');
+    background-image: url('http://somosnavegantes.com/inspiracioncomfama/public/images/fondo/Fondo.png');
     background-size: cover;
     /* background:linear-gradient(180deg, #8226fa,  #1c4ad3 30%, #4d79ff ); */
     color: white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 23px;
-    margin-left: 25%;
+    font-size: 18px;
     box-shadow: 8px 9px 17px -4px rgba(0,0,0,0.75);
 }
 
-input{
+.form-group>input, select{
     border:1px solid #f3f3f3;
+    border-radius: 0px;
+    font-size: 13px;
     background-color: transparent;
-    padding: 7px;
+    padding: 1px 10px;
     width:100%;
     color: #ffffff;
     font-style: italic;
     font-family: 'Arial Narrow Bold', sans-serif;
+    margin-bottom: -10px;
 }
 
-input::placeholder {
+input::placeholder{
     color: #f3f3f3;
     font-style: italic;
     font-family: 'Arial Narrow Bold', sans-serif;
+    font-size: 13px;
+}
+
+select option{
+    background-color: transparent;
+    color:#000;
+    font-size: 13px;
 }
 
 input:focus, .btnLogin:focus{
     outline:none !important;
     outline-width: 0 !important;
+}
+
+.groupFooter a{
+    font-size: 15px;
+    color: #160285;
+    font-weight: bold;
+    margin-left: 3%;
+    font-style: italic;
+}
+
+/* Input group document */
+.input-group{
+    display: table;
+    border-collapse: collapse;
+    width:100%;
+}
+.input-group > div{
+    display: table-cell;
+    border: 1px solid #fff;
+    vertical-align: middle;  /* needed for Safari */
+}
+.input-group-icon{
+    background-color: transparent;
+    color: #fff;
+    font-style: italic;
+    padding: 0 10px;
+    font-size: 13px;
+}
+
+.input-group input{
+    border: 0;
+    background-color: transparent;
+    padding: 0px;
+    color:#fff;
+    font-style: italic;
 }
 
 /* Olas */

@@ -1,18 +1,18 @@
 body{
-    background-image: url('../images/avatar/fondo_2.png');
+    background-image: url('../images/fondo/Fondo2-sentidos.png');
     background-size: cover;
     background-repeat:no-repeat;
-    background-size: 100% 110%;
+    background-size: 100% 130%;
 }
 
 .contentSentidos{
     background:#ffffff;
-    margin-top: 2%;
+    padding: 10px;
 }
 
 .contentSentidosDesc{
     width: 90%;
-    margin-top: 5%;
+    margin-top: 2%;
     float: left;
 }
 
@@ -20,12 +20,50 @@ body{
     font-size: 20px;
 }
 
+
 .contentSentidosImg img{
-    width: 20%;
-    height: 500px;
+    width: 110px;
+    height: 450px;
     padding:10px 0px;
     float: left;
     transition: transform 0.2s;
+}
+
+@media only screen and (max-width: 1020px) {
+    .contentSentidosImg img{
+        width: 80px;
+        height: 300px;
+    } 
+}
+
+@media only screen and (max-width: 600px) {
+    .contentSentidosImg img{
+        width: 50px;
+        height: 300px;
+    } 
+}
+
+@media only screen and (max-width: 960px) {
+    .contentSentidosImg img{
+        width: 50px;
+        height: 300px;
+    } 
+
+    body {
+        background-size: 100% 100%;
+    }
+}
+
+div.device{
+    display: none;
+    padding: 20px;
+    margin: 50% 10%;
+    font-size: 50px;
+    width: 80%;
+}
+
+div.device img{
+    width:100%;
 }
 
 .contentSentidosImg img:hover{
@@ -60,7 +98,7 @@ body{
 }
 
 .content{
-    margin:2%;
+    margin:1%;
 }
 
 .title{
@@ -97,5 +135,12 @@ body{
 p.reflexion{
     font-style: italic;
     font-size: 18px;
+}
+
+.footer img{
+    position: relative;
+    width: 220px;
+    bottom:0;
+    z-index: 1;
 }
 

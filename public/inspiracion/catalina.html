@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script>
         if(!localStorage.getItem('token')){
-            window.location="/";
+            window.location="/inspiracioncomfama";
         }
     </script>
     <link rel="stylesheet" 
@@ -16,9 +16,11 @@
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' href='./css/style.css'>
-    <link rel='stylesheet' type='text/css' href='./css/avatar-style.css'>
-    <link rel='stylesheet' type='text/css' href='./css/inspiracion-style.css'>
+    <link rel='stylesheet' type='text/css' href='public/css/style.css'>
+    <link rel='stylesheet' type='text/css' href='public/css/avatar-style.css'>
+    <link rel='stylesheet' type='text/css' href='public/css/inspiracion-style.css'>
+    <link rel='stylesheet' type='text/css' href='public/css/user-style.css'>
+    <link rel='stylesheet' type='text/css' href='public/css/navbar.css'>
 </head>
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg navAvatar">
@@ -27,22 +29,85 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="/sentido"><p>INICIO</p> </a>
-              <a class="nav-item nav-link active currentNav" href="#"><p>RETA A UN AMIGO</p></a>
-              <a class="nav-item nav-link active" href="#"><p>EVENTOS</p></a>
+                <a class="nav-item nav-link active" href="/inspiracioncomfama/viaje"><p>INICIO</p></a>
+                    <div class="row currentNav">
+                        <img src="public/images/icons/points.png" width="170px">
+                        <p class="points ml-1"></p> 
+                    </div>
+                <a class="nav-item nav-link active" href="#"><p>EVENTOS</p></a>
             </div>
         </div>
-        <div class="avatarSelected">
-            <img src="" width="80px">
+        <div class="avatarSelected" id="avatarUser">
+            <a href="#" data-toggle="modal" data-target="#avatarInfo" onclick="getUserInfo()">
+                <img src="" width="80px">
+            </a>
         </div>
     </nav>
+    <div class="modal fade avatarModal" id="avatarInfo" 
+        data-backdrop="static" data-keyboard="false" tabindex="-1" 
+        role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color:#fff">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-2 avatarProfile">
+                                <div class="avatarSelected">
+                                    <a href="#" data-toggle="modal" data-target="#avatarInfo">
+                                        <img src="" width="80px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <p>Nombre: </p>
+                                    <h4 class="userName"></h4>
+                                </div>
+                                <div class="form-group">
+                                    <p>Correo: </p>
+                                    <p class="userEmail"></p>
+                                </div>
+                                <div class="form-group">
+                                    <p>Puntaje: </p>
+                                    <div class="row">
+                                        <img src="public/images/icons/coin.png" width="40" height="40">
+                                        <p class="points ml-1"></p> 
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Premios Obtenidos: </p>
+                                <div class="row trophiesGroup">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" style="color:#fff" class="logout" onclick="logout();" title="Cerrar Sesión">
+                        <img src="public/images/icons/logout.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <section class="container-fluid">
         <section class="row content">
             <div class="col-sm-8">
-                <video class="videoLoad" id="videoLoad" autoplay controls>
+                <!-- <video class="videoLoad" id="videoLoad" autoplay controls>
                     <source src="" type="video/mp4">
                     Este navegador no es compatible con la reproducción de vídeos.
-                </video>
+                </video> -->
+                <iframe id="video" width="100%" height="465" src="" 
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
             </div>  
             <div class="col-sm-4">
                 <h2 class="text-white title">CATALINA ARROYAVE</h2>
@@ -55,13 +120,13 @@
                 </p>
                 <div class="row mt-5 groupButtons">
                     <div>
-                        <button type="button" value="Catalina Arroyave-like" class="btnQual btnLike">
+                        <button type="button" value="Catalina Arroyave-like-Arte" class="btnQual btnLike">
                             Me gusta
                         </button>
                         <p class="votes like"></p>
                     </div>
                     <div>
-                        <button type="button" value="Catalina Arroyave-dislike" class="btnQual btnDislike">
+                        <button type="button" value="Catalina Arroyave-dislike-Arte" class="btnQual btnDislike">
                             No me gusta
                         </button>
                         <p class="votes dislike"></p>
@@ -70,12 +135,15 @@
                 <div class="alert alert-primary mt-2" role="alert" style="display:none;">
                     
                 </div>
-                <a href="/inspiraciones">
-                    <button class="btnContinue" type="button" style="display: none;">Continuar</button>      
+                <a href="/inspiracioncomfama/inspiraciones">
+                    <button class="btnContinue" type="button" style="display:none;">Continuar</button>      
                 </a> 
             </div>
         </section>
     </section>
+    <div class="footer">
+        <img src="public/images/avatar/copyright.png" alt="todos los derechos reservados" />
+    </div>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
@@ -90,8 +158,9 @@
         crossorigin="anonymous">
     </script>
 
-    <script src="../js/getAvatar.js"></script>
-    <script src="../js/inspiradores/catalina.js"></script>
-    <script src="../js/inspiradores/likes.js"></script>
+    <script src="public/js/getAvatar.js"></script>
+    <script src="public/js/user.js"></script>
+    <script src="public/js/inspiradores/catalina.js"></script>
+    <script src="public/js/inspiradores/likes.js"></script>
 </body>
 </html>

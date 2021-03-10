@@ -1,0 +1,11 @@
+body{
+    background-image: url('../images/fondo/Fondo4.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+}
+
+.footer img{
+    position: relative;
+    width: 220px;
+}

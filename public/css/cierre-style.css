@@ -1,0 +1,55 @@
+body{
+    background-image: url('../images/avatar/fondo_2.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-size: 100% 100vh;
+}
+
+div.premiacion img{
+    width: 100%;
+    position: relative;
+}
+
+@media only screen and (max-width: 800px) {
+    div.premiacion img{
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    body{
+        background-size: 100% 100vh;
+    }
+
+    .footer img{
+        position: relative;
+        bottom: 0;
+    }
+}
+
+div.description{
+    margin-top: 10%;
+}
+
+h2.title{
+    font-family: 'Bungee', cursive;
+}
+
+.btnFinalizar{
+    padding:15px;
+    background: #7136a1;
+    color:white;
+    border:0px;
+    border-radius: 5px;
+    width: 90%;
+    font-size:30px;
+    margin-top: 10px;
+}
+.btnFinalizar:focus{
+    background: #7136a1;
+}
+
+.footer img{
+    position: absolute;
+}

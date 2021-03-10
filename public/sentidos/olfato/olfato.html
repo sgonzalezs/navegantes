@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script>
         if(!localStorage.getItem('token')){
-            window.location="/";
+            window.location="/inspiracioncomfama";
         }
     </script>
     <link rel="stylesheet" 
@@ -17,9 +17,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
     <!-- <link rel='stylesheet' type='text/css' href='./css/style.css'> -->
-    <link rel='stylesheet' type='text/css' href='../../css/navbar.css'>
-    <link rel='stylesheet' type='text/css' href='../../css/escucha-style.css'>
-    <link rel='stylesheet' type='text/css' href='../../css/olfato-style.css'>
+    <link rel='stylesheet' type='text/css' href='public/css/avatar-style.css'>
+    <link rel='stylesheet' type='text/css' href='public/css/escucha-style.css'>
+    <link rel='stylesheet' type='text/css' href='public/css/olfato-style.css'>
+    <link rel='stylesheet' type='text/css' href='public/css/user-style.css'>
+    <link rel='stylesheet' type='text/css' href='public/css/navbar.css'>
 </head>
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg navAvatar">
@@ -28,15 +30,74 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="/sentido"><p>INICIO</p> </a>
-              <a class="nav-item nav-link active currentNav" href="#"><p>RETA A UN AMIGO</p></a>
-              <a class="nav-item nav-link active" href="#"><p>EVENTOS</p></a>
+                <a class="nav-item nav-link active" href="/inspiracioncomfama/viaje"><p>INICIO</p></a>
+                    <div class="row currentNav">
+                        <img src="public/images/icons/points.png" width="170px">
+                        <p class="points ml-1"></p> 
+                    </div>
+                <a class="nav-item nav-link active" href="#"><p>EVENTOS</p></a>
             </div>
         </div>
-        <div class="avatarSelected">
-            <img src="" width="80px">
+        <div class="avatarSelected" id="avatarUser">
+            <a href="#" data-toggle="modal" data-target="#avatarInfo" onclick="getUserInfo()">
+                <img src="" width="80px">
+            </a>
         </div>
     </nav>
+    <div class="modal fade avatarModal" id="avatarInfo" 
+        data-backdrop="static" data-keyboard="false" tabindex="-1" 
+        role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color:#fff">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-2 avatarProfile">
+                                <div class="avatarSelected">
+                                    <a href="#" data-toggle="modal" data-target="#avatarInfo">
+                                        <img src="" width="80px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <p>Nombre: </p>
+                                    <h4 class="userName"></h4>
+                                </div>
+                                <div class="form-group">
+                                    <p>Correo: </p>
+                                    <p class="userEmail"></p>
+                                </div>
+                                <div class="form-group">
+                                    <p>Puntaje: </p>
+                                    <div class="row">
+                                        <img src="public/images/icons/coin.png" width="40" height="40">
+                                        <p class="points ml-1"></p> 
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Premios Obtenidos: </p>
+                                <div class="row trophiesGroup">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" style="color:#fff" class="logout" onclick="logout();" title="Cerrar Sesión">
+                        <img src="public/images/icons/logout.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <section class="container-fluid">
         <section class="row content">
             <div class="col-sm-8">
@@ -45,16 +106,20 @@
                         <div class="row optionRow">
                             <p>A</p>
                             <div class="col-sm-5 option option1" value="">
+                                <div class="statistic Olfato1A"></div>
                                 <a href="#">
-                                    <img src="../../images/sentidos/olfato/tipos/1/1_1.jpg" 
+                                    <img src="public/images/sentidos/olfato/tipos/1/1_1.jpg" 
                                         value="Alguien olvidó guardar la leche en la nevera la noche anterior.-Olfato1A"
+                                        class="group_a"
                                     >
                                 </a>
                             </div>
                             <div class="col-sm-5 option option2" value="">
+                                <div class="statistic Olfato2A"></div>
                                 <a href="#">
-                                    <img src="../../images/sentidos/olfato/tipos/1/1_2.jpg" 
+                                    <img src="public/images/sentidos/olfato/tipos/1/1_2.jpg" 
                                         value="Alguien olvidó guardar la leche en la nevera la noche anterior.-Olfato2A"
+                                        class="group_a"
                                     />
                                 </a>
                             </div>
@@ -65,16 +130,20 @@
                         <div class="row optionRow">
                             <p>B</p>
                             <div class="col-sm-5 option option1" value="">
+                                <div class="statistic Olfato1B"></div>
                                 <a href="#">
-                                    <img src="../../images/sentidos/olfato/tipos/2/1_1.jpg" 
+                                    <img src="public/images/sentidos/olfato/tipos/2/1_1.jpg" 
                                         value="Saliste a caminar fuera de la ciudad a un lugar cubierto por la naturaleza.-Olfato1B"
+                                        class="group_b"
                                     />
                                 </a>
                             </div>
                             <div class="col-sm-5 option option2" value="">
+                                <div class="statistic Olfato2B"></div>
                                 <a href="#">
-                                    <img src="../../images/sentidos/olfato/tipos/2/1_2.jpg" 
+                                    <img src="public/images/sentidos/olfato/tipos/2/1_2.jpg" 
                                         value="Saliste a caminar fuera de la ciudad a un lugar cubierto por la naturaleza.-Olfato2B"
+                                        class="group_b"
                                     />
                                 </a>
                             </div>
@@ -84,16 +153,20 @@
                         <div class="row optionRow">
                             <p>C</p>
                             <div class="col-sm-5 option option1" value="">
+                                <div class="statistic Olfato1C"></div>
                                 <a href="#">
-                                    <img src="../../images/sentidos/olfato/tipos/3/1_1.jpg" 
+                                    <img src="public/images/sentidos/olfato/tipos/3/1_1.jpg" 
                                         value="Sales en tu bicicleta a andar por la ciudad y empieza a llover.-Olfato1C"
-                                        />
+                                        class="group_c"
+                                    />
                                 </a>
                             </div>
                             <div class="col-sm-5 option option2" value="">
+                                <div class="statistic Olfato2C"></div>
                                 <a href="#">
-                                    <img src="../../images/sentidos/olfato/tipos/3/1_2.jpg" 
+                                    <img src="public/images/sentidos/olfato/tipos/3/1_2.jpg" 
                                         value="Sales en tu bicicleta a andar por la ciudad y empieza a llover.-Olfato2C"
+                                        class="group_c"
                                     />
                                 </a>
                             </div>
@@ -103,16 +176,20 @@
                         <div class="row optionRow">
                             <p>D</p>
                             <div class="col-sm-5 option option1" value="">
+                                <div class="statistic Olfato1D"></div>
                                 <a href="#">
-                                    <img src="../../images/sentidos/olfato/tipos/4/1_1.jpg" 
+                                    <img src="public/images/sentidos/olfato/tipos/4/1_1.jpg" 
                                         value="Visitas a tu abuela en su vieja casa.-Olfato1D"
+                                        class="group_d"
                                     />
                                 </a>
                             </div>
                             <div class="col-sm-5 option option2" value="">
+                                <div class="statistic Olfato2D"></div>
                                 <a href="#">
-                                    <img src="../../images/sentidos/olfato/tipos/4/1_2.jpg" 
+                                    <img src="public/images/sentidos/olfato/tipos/4/1_2.jpg" 
                                         value="Visitas a tu abuela en su vieja casa.-Olfato2D"
+                                        class="group_d"
                                     />
                                 </a>
                             </div>
@@ -138,12 +215,15 @@
                 <div class="alert alert-primary mt-2" role="alert" style="display:none;">
                     
                 </div>
-                <a href="/olfato-reflexion">
+                <a href="/inspiracioncomfama/olfato-reflexion">
                     <button class="btnContinue" type="button" style="display: none;">Siguiente</button>      
                 </a> 
             </div>
         </section>
     </section>
+    <div class="footer">
+        <img src="public/images/avatar/copyright.png" alt="todos los derechos reservados" />
+    </div>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
@@ -157,7 +237,8 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
         crossorigin="anonymous">
     </script>
-    <script src="../../js/olfato1.js"></script>
-    <script src="../../js/getAvatar.js"></script>
+    <script src="public/js/olfato1.js"></script>
+    <script src="public/js/getAvatar.js"></script>
+    <script src="public/js/user.js"></script>
 </body>
 </html>

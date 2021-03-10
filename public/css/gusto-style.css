@@ -1,5 +1,5 @@
 body{
-    background-image: url('../images/avatar/fondo_2.png');
+    background-image: url('../images/fondo/Fondo2-sentidos.png');
     background-size: cover;
     background-repeat:no-repeat;
     background-size: 100% 150%;
@@ -11,12 +11,30 @@ body{
     }
 }
 
+@media only screen and (max-width: 1080px) {
+    body {
+        background-size: 100% 100%;
+    }
+
+    .footer img{
+        position: relative;
+    }
+}
+
+.title{
+    font-family: 'Bungee', cursive;
+}
+
 .paragraph{
     font-style: italic;
 }
 
 .contentMain{
     display: inline-block;
+}
+
+.content{
+    margin: 10px 3%;
 }
 
 .option img{
@@ -57,4 +75,17 @@ body{
 .btnSend:focus, .btnContinue:focus{
     outline:none !important;
     outline-width: 0 !important;
+}
+
+div.statistic{
+    position: absolute; 
+    z-index:1;
+    margin:40px;
+    background-color: #ffffff;
+    display: none;
+    font-family: 'Bungee', cursive;
+    font-size:25px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    opacity: 0.8;
 }

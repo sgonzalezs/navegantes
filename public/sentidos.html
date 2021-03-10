@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
+<head><meta charset="gb18030">
+    
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Elige tu sentido favorito</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <meta name='viewport' content='width=device-width, initial-scale=1'> -->
     <script>
         if(!localStorage.getItem('token')){
-            window.location="/";
+            window.location="/inspiracioncomfama";
         }
     </script>
     <link rel="stylesheet" 
@@ -15,9 +15,12 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' href='./css/style.css'>
-    <link rel='stylesheet' type='text/css' href='./css/avatar-style.css'>
-    <link rel='stylesheet' type='text/css' href='./css/sentidos-style.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='./public/css/style.css'>
+    <link rel='stylesheet' type='text/css' href='./public/css/avatar-style.css'>
+    <link rel='stylesheet' type='text/css' href='./public/css/sentidos-style.css'>
+    <link rel='stylesheet' type='text/css' href='./public/css/user-style.css'>
+    <link rel='stylesheet' type='text/css' href='./public/css/navbar.css'>
 </head>
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg navAvatar">
@@ -26,55 +29,120 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="/sentido"><p>INICIO</p> </a>
-              <a class="nav-item nav-link active currentNav" href="#"><p>RETA A UN AMIGO</p></a>
-              <a class="nav-item nav-link active" href="#"><p>EVENTOS</p></a>
+                <a class="nav-item nav-link active" href="/inspiracioncomfama/viaje"><p>INICIO</p></a>
+                    <div class="row currentNav">
+                        <img src="./public/images/icons/points.png" width="170px">
+                        <p class="points ml-1"></p> 
+                    </div>
+                <a class="nav-item nav-link active" href="#"><p>EVENTOS</p></a>
             </div>
         </div>
         <div class="avatarSelected" id="avatarUser">
-            <img src="" width="80px">
+            <a href="#" data-toggle="modal" data-target="#avatarInfo">
+                <img src="" width="80px">
+            </a>
         </div>
     </nav>
+    <div class="modal fade avatarModal" id="avatarInfo" 
+        data-backdrop="static" data-keyboard="false" tabindex="-1" 
+        role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color:#fff">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-2 avatarProfile">
+                                <div class="avatarSelected">
+                                    <a href="#" data-toggle="modal" data-target="#avatarInfo">
+                                        <img src="" width="80px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <p>Nombre: </p>
+                                    <h4 class="userName"></h4>
+                                </div>
+                                <div class="form-group">
+                                    <p>Correo: </p>
+                                    <p class="userEmail"></p>
+                                </div>
+                                <div class="form-group">
+                                    <p>Puntaje: </p>
+                                    <div class="row">
+                                        <img src="./public/images/icons/coin.png" width="40" height="40">
+                                        <p class="points ml-1"></p> 
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Premios Obtenidos: </p>
+                                <div class="row trophiesGroup">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" style="color:#fff" class="logout" onclick="logout();" title="Cerrar Sesión">
+                        <img src="./public/images/icons/logout.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <section class="conatiner">
         <section class="row m-2">
-            <div class="col-sm-12">
+            <div class="col-md-10 offset-md-1">
                 <div class="row contentSentidos">
-                    <div class="col-sm-8 contentSentidosImg">
-                        <a href="/escucha">
-                            <img src="./images/sentidos/1_escucha.jpg">
+                    <div class="col-md-7 contentSentidosImg">
+                        <a href="/inspiracioncomfama/escucha">
+                            <img src="./public/images/sentidos/escucha.png" class="escucha">
                         </a>
-                        <a href="/vista">
-                            <img src="./images/sentidos/2_vision.jpg">
+                        <a href="/inspiracioncomfama/vista">
+                            <img src="./public/images/sentidos/vision.png" class="vista">
                         </a>
-                        <a href="/tacto">
-                            <img src="./images/sentidos/5_tacto.jpg">
+                        <a href="/inspiracioncomfama/tacto">
+                            <img src="./public/images/sentidos/tacto.png" class="tacto">
                         </a>
-                        <a href="/olfato">
-                            <img src="./images/sentidos/3_olfato.jpg">
+                        <a href="/inspiracioncomfama/olfato">
+                            <img src="./public/images/sentidos/olfato.png" class="olfato">
                         </a>
-                        <a href="/gusto">
-                            <img src="./images/sentidos/4_gusto.jpg">
+                        <a href="/inspiracioncomfama/gusto">
+                            <img src="./public/images/sentidos/gusto.png" class="gusto">
                         </a>
                     </div>
-                    <div class="col-sm-4 contentSentidosDesc">
+                    <div class="col-md-5 contentSentidosDesc">
                         <h1>Selecciona tu sentido favorito</h1>
                         <p>
                             A través de ellos nos comunicamos con el mundo exterior. 
                             Antes de entender lo que nos rodea, vamos a explorar nuestros sentidos. 
                             Elige uno y comienza este viaje.
+                            Debes completar todos los sentidos para pasar al siguiente nivel.
                         </p>
                         <div class="alert alert-primary mt-2" role="alert" style="display:none;">
                     
                         </div>
-                        <a href="/sentidos-reflexion">
-                            <button class="btnContinue" type="button" style="display: none;">Continuar</button>      
+                        <a href="/inspiracioncomfama/sentidos-reflexion">
+                            <button class="btnContinue btnContinueSentidos" type="button" style="display: none;">Continuar</button>      
                         </a> 
                     </div>
                 </div>
             </div>
         </section>
     </section>
-
+    <div class="device">
+        <img src="./public/images/icons/device.png" alt="">
+    </div>
+    <div class="footer">
+        <img src="./public/images/avatar/copyright.png" alt="todos los derechos reservados" />
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
         crossorigin="anonymous">
@@ -87,6 +155,9 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
         crossorigin="anonymous">
     </script>
-    <script src="./js/sentidos.js"></script>
+    <!-- <script src="../js/movil-detect.js"></script> -->
+    <script src="./public/js/sentidos.js"></script>
+    <script src="./public/js/getAvatar.js"></script>
+    <script src="./public/js/user.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script>
         if(!localStorage.getItem('token')){
-            window.location="/";
+            window.location="/inspiracioncomfama";
         }
     </script>
     <link rel="stylesheet" 
@@ -15,8 +15,9 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' href='./css/style.css'>
-    <link rel='stylesheet' type='text/css' href='./css/avatar-style.css'>
+    <link rel='stylesheet' type='text/css' href='/css/style.css'>
+    <link rel='stylesheet' type='text/css' href='/css/avatar-style.css'>
+    <link rel='stylesheet' type='text/css' href='/css/navbar.css'>
 </head>
 <body>
     
@@ -26,29 +27,32 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="/sentido"><p>INICIO</p> </a>
-              <a class="nav-item nav-link active currentNav" href="#"><p>RETA A UN AMIGO</p></a>
-              <a class="nav-item nav-link active" href="#"><p>EVENTOS</p></a>
+                <a class="nav-item nav-link active" href="//viaje"><p>INICIO</p></a>
+                    <div class="row currentNav">
+                        <img src="/images/icons/points.png" width="165px">
+                        <p class="points ml-1">0</p> 
+                    </div>
+                <a class="nav-item nav-link active" href="#"><p>EVENTOS</p></a>
             </div>
         </div>
         <div class="avatarSelected">
-            <img src="./images/avatar/pirataMin_1.png" width="80px">
+            <img src="/images/avatar/pirataMin_1.png" width="80px">
         </div>
     </nav>
     <section class="container-fluid">
         <section class="row">
             <div class="col-sm-7 offset-sm-1 avatarSelect">
                 <a href="#" class="myAvatar myAvatar1">
-                    <img src="./images/avatar/pirata_1.png">
+                    <img src="/images/avatar/pirata_1.png">
                 </a>
                 <a href="#" class="myAvatar myAvatar2">
-                    <img src="./images/avatar/pirata_2.png">
+                    <img src="/images/avatar/pirata_2.png">
                 </a>
                 <a href="#" class="myAvatar myAvatar3">
-                    <img src="./images/avatar/pirata_3.png">
+                    <img src="/images/avatar/pirata_3.png">
                 </a>
                 <a href="#" class="myAvatar myAvatar4">
-                    <img src="./images/avatar/pirata_4.png">
+                    <img src="/images/avatar/pirata_4.png">
                 </a>
             </div>
             <div class="col-sm-4 avatarDesc">
@@ -61,7 +65,7 @@
                 <div class="alert alert-primary mt-2" role="alert" style="display:none;">
                     
                 </div>
-                <a href="/sentido">
+                <a href="//viaje">
                     <button class="btnContinue" type="button" style="display: none;">Continuar</button>      
                 </a> 
             </div>
@@ -72,7 +76,10 @@
             </div>
         </section>
     </section>
-
+    <div class="footer">
+        <img src="/images/avatar/copyright.png" alt="todos los derechos reservados" />
+    </div>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
         crossorigin="anonymous">
@@ -85,6 +92,6 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
         crossorigin="anonymous">
     </script>
-    <script src="./js/avatar.js"></script>
+    <script src="/js/avatar.js"></script>
 </body>
 </html>

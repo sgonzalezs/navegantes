@@ -1,0 +1,177 @@
+body{
+    background-image: url('../images/fondo/Fondo4.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-size: 100% 100vh;
+}
+
+@media only screen and (max-width: 960px) {
+    body {
+        background-size: 100% 100%;
+    }
+}
+
+.contentSentidos{
+    margin:10px 3%;
+}
+
+.contentSentidosDesc{
+    width: 90%;
+    margin-top: 2%;
+    float: left;
+}
+
+.contentSentidosImg img{
+    width: 150px;
+    height: 450px;
+    padding:10px 0px;
+    float: left;
+    transition: transform 0.2s;
+}
+
+@media only screen and (max-width: 960px) {
+    .contentSentidosImg img{
+        width: 90px;
+        height: 350px;
+    } 
+}
+
+@media only screen and (max-width: 600px) {
+    .contentSentidosImg img{
+        width: 80px;
+        height: 200px;
+    } 
+}
+
+.contentSentidosImg img:hover{
+    transform:scale(1.02,1.02);
+}
+
+.btnContinue{
+    background-image: url('../images/avatar/Fondo.png');
+    background-size: cover;
+    padding:5px;
+    width:150px;
+    margin:auto;
+    font-family: 'Bungee', cursive;
+    color:#ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 20%;
+    margin-top:10px;
+    box-shadow: 8px 9px 17px -4px rgba(0,0,0,0.75);
+}
+
+.btnContinue:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+}
+
+/* Estilo reflexion */
+
+.content{
+    margin:2%;
+}
+
+.title{
+    font-family: 'Bungee', cursive;
+    color: #ffffff;
+    font-size:25px;
+}
+
+.subTitle{
+    font-family: 'Leckerli One', cursive;
+    color:#ffff4d;
+    font-size:23px;
+}
+
+p.resume{
+    font-style: italic;
+    font-size: 15px;
+}
+
+/* Imagenes de recorridos */
+
+.imagesGroup img{
+    width: 48%;
+    margin: 1px;
+}
+
+/* Video  */
+.videoLoad{
+    width: 100%;
+}
+
+.answer{
+    border:3px solid #f3f3f3;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 7px;
+    width:100%;
+    color: #ffffff;
+    font-style: italic;
+}
+
+.answer:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+}
+
+.paragraph{
+    font-style: italic;
+}
+
+.subTitle{
+    font-family: 'Leckerli One', cursive;
+    color:#ffff4d;
+    font-size:20px;
+}
+
+.btnSend, .btnContinue{
+    background-image: url('../images/avatar/Fondo.png');
+    background-size: cover;
+    padding:5px;
+    width:150px;
+    margin:auto;
+    font-family: 'Bungee', cursive;
+    color:#ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 20%;
+    margin-top:10px;
+    box-shadow: 8px 9px 17px -4px rgba(0,0,0,0.75);
+}
+
+.btnSend:focus, .btnContinue:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+}
+
+.footer img{
+    position: absolute;
+    width: 220px;
+}
+
+@media only screen and (max-width: 1080px) {
+    
+    .footer img{
+        position: relative;
+        margin-top: 10px;
+    }
+}
+
+div.device{
+    display: none;
+    padding: 20px;
+    margin: 50% 10%;
+    font-size: 50px;
+    width: 80%;
+}
+
+div.device img{
+    width:100%;
+}
+
+

@@ -1,8 +1,8 @@
 body{
-    background-image: url('../images/avatar/fondo_2.png');
+    background-image: url('../images/fondo/Fondo2-sentidos.png');
     background-size: cover;
     background-repeat:no-repeat;
-    background-size: 100% 110%;
+    background-size: 100% 140%;
 }
 
 @media only screen and (max-width: 800px) {
@@ -11,13 +11,50 @@ body{
     }
 }
 
+.content{
+    margin:10px 3%;
+}
+
+@media only screen and (max-width: 960px) {
+    body {
+        background-size: 100% 100%;
+    }
+    .footer img{
+        position: relative;
+    }
+}
+
 .option img{
     margin-top: 10px;
     width: 100%;
+    transition: transform 0.3s;
+}
+
+.option img:hover{
+   transform: scale(1.03, 1.03); 
 }
 
 .olfatoContent p{
     font-family: 'Bungee', cursive;
-    font-size:25px;
+    font-size:20px;
     color: #ffffff;
+}
+
+.subTitle{
+    font-size: 17px;
+}
+
+div.statistic{
+    position: absolute; 
+    z-index:1;
+    /* margin:45px 5px 0px 15px; */
+    left:30%;
+    top:30%;
+    background-color: #ffffff;
+    display: none;
+    font-family: 'Bungee', cursive;
+    font-size:25px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    opacity: 0.8;
 }

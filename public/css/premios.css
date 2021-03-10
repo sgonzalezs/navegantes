@@ -1,0 +1,56 @@
+
+.avatarLoaded{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 450px;
+}
+
+.trophyEscucha img{
+    width: 70%;
+    margin-left:30%;
+    margin-top:5%;
+    margin-bottom:5%;
+    bottom:50%;
+}
+
+div.congratulations{
+    margin-top: 10%;
+    right:0;
+}
+
+div.congratulations p{
+    font-weight: bold;
+}
+
+.footer img{
+    position: absolute;
+    width: 220px;
+}
+
+@media only screen and (max-width: 1080px) {
+    .avatarLoaded{  
+        width: 350px;
+    }
+    body{
+        background-size: 100% 100vh;
+    }
+    .footer img{
+        position: relative;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    
+    .avatarLoaded{  
+        display: none;
+    }
+    body{
+        background-size: 100% 100%;
+    }
+
+    .trophyEscucha img{
+        margin-left:15%;
+    }
+}

@@ -5,36 +5,171 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Navegantes</title>
     <!-- <meta name='viewport' content='width=device-width, initial-scale=1'> -->
+    <script>
+        
+        if(localStorage.getItem('token')){
+            if(localStorage.getItem('userAvatar')){
+                window.location="/inspiracioncomfama/sentido";
+            }else{
+                window.location="/inspiracioncomfama/avatar";
+            }
+        }
+    </script>
     <link rel="stylesheet" 
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/style.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='http://navegantes.herokuapp.com/css/style.css'> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='./public/css/style.css'>
     <!-- <link rel='stylesheet' type='text/css' media='screen' href='./css/olas-style.css'> -->
 </head>
 <body>
     <section class="container-fluid">
         <section class="row">
             <div class="col-sm-4 offset-sm-6">
-                <form id="formLogin" class="formLogin">
-                    <div class="form-group formTitle float-right">
-                        <h4>INSCRÍBETE</h4>
+                <form id="formIngresa" class="formLogin">
+                    <div class="row ">
+                        <div class=" formTitle">
+                            <h4 class="">INSCRÍBETE</h4>
+                        </div>
+                    </div>
+                    <div class="form-group subTitleLogin">
+                        <p>Información de usuario</p>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="txtName" name="txtName" placeholder="Nombre" required/>
+                        <input type="text" id="txtName" name="txtName" 
+                            placeholder="Nombre de usuario" required />
                     </div>
                     <div class="form-group">
-                        <input type="email" id="txtEmail" name="txtEmail" placeholder="Correo" required/>
+                        <input type="email" id="txtEmail" name="txtEmail" 
+                            placeholder="Correo electrónico" required  />
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-5">
+                            <select id="slc_document" name="slc_document" required >
+                                <option value="">Tipo de documento</option>
+                                <option value="TI">T.I</option>
+                                <option value="CC">C.C</option>
+                                <option value="RC">R.C</option>
+                                <option value="PEP">P.E.P.</option>
+                                <option value="CE">C.E.</option>
+                                <option value="NUIP">NUIP</option>
+                                <option value="NES">NES</option>
+                            </select>
+                        </div>
+                        <div class=" col-md-7">
+                            <div class="input-group">
+                                <div class="input-group-icon">N°</div>
+                                <div class="input-group-area">
+                                    <input type="text" id="n_document" name="n_document" class="" required>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <input type="number" id="txtAge" name="txtAge" placeholder="Edad" required/>
+                        <input type="text" id="txt_number" name="txt_number" class="phone" placeholder="Whatsapp" required/>
+                    </div>
+                    <div class="form-group ">
+                        <p class="paragraphLogin">
+                            ¡Hola! Ahora haces parte de esta aventura y para poder continuar con la búsqueda del tesoro,
+                            debemos asegurarnos de contar con la autorización de tus padres o acudientes.
+                        </p>
+                        <p class="subTitleParent">Información de acudiente</p>
                     </div>
                     <div class="form-group">
+                        <input type="text" id="txt_nameParent" name="txt_nameParent" placeholder="Nombre completo" 
+                        required/>
+                        <input type="text" id="txt_docParent" name="txt_docParent" 
+                        placeholder="Número de documento" class="document" style="margin-top: 7px;" 
+                        required/>
+                    </div>
+                    <div class="form-group alertMessage alert alert-danger" style="display: none;">
+                        valida los campos para continuar
+                    </div>
+                    <div class="form-group groupFooter">
                         <button type="Submit" class="btnLogin">INGRESA</button>
+                        <a href="#" class="login">Iniciar sesión</a>
+                    </div>
+                    <div class="form-group groupFooter">
+                        <a href="#" data-toggle="modal" data-target="#authModal">Aviso de privacidad*</a>
+                        <a href="#">Contáctenos</a>
+                    </div>
+                    
+                </form>
+
+                <form id="formLogin" class="formLogin" style="display: none;">
+                    <div class="row ">
+                        <div class=" formTitle">
+                            <h4 class="">INGRESA</h4>
+                        </div>
+                    </div>
+                    <div class="form-group subTitleLogin">
+                        <p>Información de usuario</p>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="documentLogin" class="document" name="documentLogin" 
+                            placeholder="N° de documento" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="emailLogin" name="emailLogin" 
+                            placeholder="Correo electrónico" required  />
+                    </div>
+                    <div class="form-group alertMessage alert alert-danger" style="display: none;">
+                        valida los campos para continuar
+                    </div>
+                    <div class="form-group groupFooter">
+                        <button type="Submit" class="btnLogin">INGRESA</button>
+                        <a href="#" class="register">Regístrate</a>
+                    </div>
+                    <div class="form-group groupFooter">
+                        <a href="#" data-toggle="modal" data-target="#authModal">Aviso de privacidad*</a>
+                        <a href="#">Contáctenos</a>
                     </div>
                 </form>
             </div>
+            <div class="form-group alert alert-danger alertDevice" >
+                Gira el dispositivo para una mejor experiencia
+            </div>
+            <!-- MODAL Autorizacion -->
+            <div class="modal fade" id="authModal" tabindex="-1" data-backdrop="static" data-keyboard="false">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Aviso de Privacidad</h5>
+                      <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button> -->
+                    </div>
+                    <div class="modal-body">
+                        <p class="authParagraph">
+                            Al Ingresar al sitio, el Adulto o Acudiente relacionado en el formulario con Nombre y Número de
+                            Cédula, obrando en nombre del niño, niña o joven del cual también se relacionan sus datos
+                            personales en el formulario, en su calidad de representante legal, acepta y consiente en lo
+                            siguiente:
+                            COMFAMA me ha informado de su interés en el tratamiento de datos personales del niño, niña o
+                            joven, en ejecución del Proyecto “Inspiración Comfama”, implementado por la CORPORACIÓN
+                            NAVEGANTES, encargada del tratamiento de los datos.
+                            Autorizo de manera expresa y previo ejercicio del derecho del del niño, niña o joven de ser
+                            escuchado/a, el tratamiento de sus datos personales con los fines establecidos en la Política de
+                            Protección de Datos Personales de COMFAMA que podrás consultar en la página comfama.com,
+                            que incluyen actividades educativas, culturales, recreativas, entre otras, relacionadas directa o
+                            indirectamente con su objeto social. Comprendo que en cualquier momento puedo revocar esta
+                            autorización.
+                            Los datos podrán ser tratados en sistemas informáticos propios de COMFAMA o en sistemas
+                            informáticos de terceros encargados, bajo la dirección y auditoría de COMFAMA, en los términos
+                            de la autorización dada.
+                            Si tienes alguna duda o solicitud respecto al uso de los datos personales suministrados, puedes
+                            escribirnos al siguiente correo electrónico: ProteccionDatosPersonales@comfama.com.co
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             <!-- <div class="faro">
                 <img src="./images/olas/faro.png">
             </div>
@@ -52,7 +187,9 @@
             </div> -->
         </section>
     </section>
-    
+    <div class="device">
+        <img src="./public/images/icons/device.png" alt="">
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
@@ -66,6 +203,8 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
         crossorigin="anonymous">
     </script>
-    <script src="./js/login.js"></script>
+    <!-- <script src="https://navegantes.herokuapp.com/js/login.js"></script> -->
+    <!--<script src='public/js/login.js'></script>-->
+    <script src='https://www.somosnavegantes.com/inspiracioncomfama/public/js/login.js'></script>
 </body>
 </html>

@@ -1,6 +1,21 @@
 body{
-    background-image: url('../images/avatar/fondo_2.png');
+    background-image: url('../images/fondo/Fondo2-sentidos.png');
     background-size: cover;
     background-repeat:no-repeat;
-    background-size: 100% 110%;
+    background-size: 100% 100vh;
+}
+
+.content{
+    margin: 10px 3%;
+}
+
+@media only screen and (max-width: 960px) {
+    .contentSentidosImg img{
+        width: 50px;
+        height: 300px;
+    } 
+
+    body {
+        background-size: 100% 100%;
+    }
 }

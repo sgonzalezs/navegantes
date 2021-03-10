@@ -1,0 +1,19 @@
+.modal-content{
+    background-image: url('../images/fondo/Fondo.png');
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'Bungee', cursive;
+    font-size:13px;
+}
+
+a.logout{
+    transition: transform 0.1s;
+}
+
+a.logout:hover{
+    transform:scale(1.05,1.05);
+}
+
+p.points{
+    font-size:25px;
+}
